@@ -5,54 +5,60 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" Objective",
+         "description":"Objective",
          "duration":"30 min",
-         "tutorial_name":"Objective.md",
-         "title":"MariaDB Operator Tutorial Objective"
-      },  {
-         "description":" Introduction of MariaDB Operator",
+         "tutorial_name":"objective.md",
+         "title":"MariaDB Operator"
+      },
+      {
+         "description":"Introduction of MariaDB Operator",
          "duration":"30 min",
-         "tutorial_name":"Introduction.md",
+         "tutorial_name":"introduction.md",
          "title":"Introduction of MariaDB Operator"
       },
       {
          "description":"Install MariaDB Operator",
          "duration":"30 min",
-         "tutorial_name":"Install MariaDB Operator.md",
+         "tutorial_name":"install-mariadb-operator.md",
          "title":"Install MariaDB Operator"
       },
-      {
+	  {
          "description":" Create Instance of MariaDB Cluster",
          "duration":"30 min",
-         "tutorial_name":"Create Instance of MariaDB Cluster.md",
+         "tutorial_name":"create-instance.md",
          "title":"Create Instance of MariaDB Cluster"
-      },  
-
-​      {
-​         "description":" Schedule Backup of MariaDB",
-​         "duration":"30 min",
-​         "tutorial_name":"Schedule Backup of MariaDB.md",
-​         "title":"Schedule Backup of MariaDB"
-​      },
-​      {
-​         "description":"Enable Monitoring service on MariaDB",
-​         "duration":"30 min",
-​         "tutorial_name":"Enable Monitoring service on MariaDB.md",
-​         "title":"Enable Monitoring service on MariaDB"
-​      },
-​      {
-​         "description":" Summary",
-​         "duration":"30 min",
-​         "tutorial_name":"Summary.md",
-​         "title":"Summary"
-​      }
-
+      },
+	  {
+         "description":"Access MariadB database",
+         "duration":"30 min",
+         "tutorial_name":"access-database.md",
+         "title":"Access MariadB database"
+      },
+      {
+         "description":"Schedule Backup of MariaDB",
+         "duration":"30 min",
+         "tutorial_name":"backup.md",
+         "title":"Schedule Backup of MariaDB"
+      },
+      {
+         "description":" Enable Monitoring service on MariaDB",
+         "duration":"30 min",
+         "tutorial_name":"monitoring.md",
+         "title":"Enable Monitoring service on MariaDB"
+      },
+	  {
+         "description":"Summary",
+         "duration":"30 min",
+         "tutorial_name":"summary.md",
+         "title":"Summary"
+      }
+      
    ],
    "usefulLinks":[
       {
-         "title":"MariadB Operator",
-         "description":"MariaDB Operator ",
-         "url":"https://operatorhub.io/operator/mariadb-operator-app"
+         "title":"Crunchy PostgreSQL Operator",
+         "description":"Crunchy PostgreSQL Operator ",
+         "url":"https://operatorhub.io/operator/postgresql"
       }
    ]
 }

@@ -1,9 +1,9 @@
 {
   "name": "MariaDB Operator",
   "description": "MariaDB Operator",
-  "logo": "_images/logo.png",
+  "logo": "_images/SalesStack.png",
   "has_supporting_content": true,
-  "stack_id": "MariaDB-Operator",
+  "stack_id": "mariadb-operator",
   "type": "stack",
   "categories": ["Database"],
   "platform": "Kubernetes",
@@ -16,31 +16,15 @@
     "Install time": ["5 minutes"]
   },
 "deployment_information": {
-  "Operator Project": "/home/student/projects/Mariadb-Operator",
+  "Operator Project": "NA",
   "Deployment Namespace": "my-mariadb-operator-app"
 },
   "commands": [
-    {
-      "description": "create directory for MariaDB operator",
-      "exec": "cd && mkdir Mariadb-Operator && cd Mariadb-Operator"
-    },
+    
     {
       "description": "command to install the MariaDB operator from operatorhub",
       "exec": "kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml"
-    },
-    {
-      "description": "watch your MariaDB operator",
-      "exec": "kubectl get csv -n my-mariadb-operator-app"
-    },
-    {
-      "description": "Create Database storage location: '/mnt/data' and provide permission",
-      "exec": "mkdir /mnt/data && chmod a+rwx /mnt/data"
-    },
-
-  {
-      "description": "clone and prepare",
-      "exec": "cd /home/student/projects && git clone https://github.com/aradhana14nov/Operator-yaml && cd Operator-yaml && kubectl create -f MariaDBserver.yaml -n mariadb-operator"
-    },
+    }
 
 ],
   "display": [
