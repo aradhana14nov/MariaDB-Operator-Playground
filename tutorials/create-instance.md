@@ -4,7 +4,7 @@ As Database will be stored at location: '/mnt/data' . These location should exis
 
 ### Create this CR which will create a database called test-db, along with user credentials
 
-```
+```execute
 cat <<'EOF' > MariaDBserver.yaml
 apiVersion: mariadb.persistentsys/v1alpha1
 kind: MariaDB
@@ -39,7 +39,7 @@ EOF
 
 Execute below command to create MariaDBserver instance :
 
-```
+```execute
 kubectl create -f MariaDBserver.yaml 
 ```
 
@@ -49,7 +49,7 @@ This CR with create a database called `test-db`, along with user credentials. Th
 
 Verify list of pods. 
 
-```
+```execute
 # kubectl get pods -n mariadb-operator
 NAME                              READY   STATUS    RESTARTS   AGE
 mariadb-operator-78c95468-m824g   1/1     Running   0          118s
@@ -58,7 +58,7 @@ mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 
 Verify that "mariadb-service" is created.
 
-```
+```execute
 # kubectl get svc -n mariadb
 NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
 mariadb-backup-service     ClusterIP   10.96.69.127    <none>        3306/TCP            103s
@@ -68,8 +68,12 @@ mariadb-service            NodePort    10.102.17.13    <none>        80:30685/TC
 
 Service "mariadb-service" is a NodePort Service that exposes mariadb service on port 3306
 
-```
+```execute
 # kubectl describe service/mariadb-service -n mariadb
+```
+
+Output like this will be shown:
+```
 Name:                     mariadb-service
 Namespace:                mariadb
 Labels:                   MariaDB_cr=mariadb
