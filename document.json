@@ -20,10 +20,7 @@
   "Deployment Namespace": "my-mariadb-operator-app"
 },
   "commands": [
-    {
-      "description": "create directory for MariaDB operator",
-      "exec": "cd && mkdir Mariadb-Operator && cd Mariadb-Operator"
-    },
+    
     {
       "description": "command to install the MariaDB operator from operatorhub",
       "exec": "kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml"
