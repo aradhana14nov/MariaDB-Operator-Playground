@@ -1,7 +1,7 @@
 {
   "name": "MariaDB Operator",
   "description": "MariaDB Operator",
-  "logo": "_images/logo.png",
+  "logo": "_images/SalesStack.png",
   "has_supporting_content": true,
   "stack_id": "mariadb-operator",
   "type": "stack",
