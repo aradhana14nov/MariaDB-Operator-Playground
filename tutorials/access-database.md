@@ -17,12 +17,12 @@ Step3:
 ```execute
 show databases;
 ```
+```
+Note: In order to create database and table login with root user using below command.
+```
 Step4:
 ```execute
 mysql -h <IP> -P 30685 -u root -ppassword
-```
-```
-Note: To create database switch to root user.
 ```
 
 step5:
