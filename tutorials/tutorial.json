@@ -16,13 +16,7 @@
          "tutorial_name":"introduction.md",
          "title":"Introduction of MariaDB Operator"
       },
-      {
-         "description":"Install MariaDB Operator",
-         "duration":"30 min",
-         "tutorial_name":"install-mariadb-operator.md",
-         "title":"Install MariaDB Operator"
-      },
-	  {
+      	  {
          "description":" Create Instance of MariaDB Cluster",
          "duration":"30 min",
          "tutorial_name":"create-instance.md",
