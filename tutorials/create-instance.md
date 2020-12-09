@@ -40,7 +40,7 @@ EOF
 Execute below command to create MariaDBserver instance :
 
 ```execute
-kubectl create -f MariaDBserver.yaml 
+kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app 
 ```
 
 This CR with create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB CR file.
