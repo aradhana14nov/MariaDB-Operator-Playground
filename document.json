@@ -16,7 +16,7 @@
     "Install time": ["5 minutes"]
   },
 "deployment_information": {
-  "Operator Project": "/home/student/projects/Mariadb-Operator",
+  "Operator Project": "NA",
   "Deployment Namespace": "my-mariadb-operator-app"
 },
   "commands": [
@@ -33,8 +33,8 @@
       "exec": "kubectl get csv -n my-mariadb-operator-app"
     },
     {
-      "description": "Create Database storage location: '/mnt/data' and provide permission",
-      "exec": "mkdir /mnt/data && chmod a+rwx /mnt/data"
+      "description": "Create Namespace",
+      "exec": "export MARIADB_OPERATOR_NAMESPACE=mariadb-operator && kubectl create namespace mariadb-operator"
     },
 
   {
