@@ -50,7 +50,9 @@ This CR with create a database called `test-db`, along with user credentials. Th
 Verify list of pods. 
 
 ```execute
-# kubectl get pods -n mariadb-operator
+kubectl get pods -n mariadb-operator
+```
+Output:
 NAME                              READY   STATUS    RESTARTS   AGE
 mariadb-operator-78c95468-m824g   1/1     Running   0          118s
 mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
@@ -59,7 +61,10 @@ mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 Verify that "mariadb-service" is created.
 
 ```execute
-# kubectl get svc -n mariadb
+kubectl get svc -n mariadb
+```
+Output:
+```
 NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
 mariadb-backup-service     ClusterIP   10.96.69.127    <none>        3306/TCP            103s
 mariadb-operator-metrics   ClusterIP   10.110.31.195   <none>        8383/TCP,8686/TCP   105s
@@ -69,7 +74,7 @@ mariadb-service            NodePort    10.102.17.13    <none>        80:30685/TC
 Service "mariadb-service" is a NodePort Service that exposes mariadb service on port 3306
 
 ```execute
-# kubectl describe service/mariadb-service -n mariadb
+kubectl describe service/mariadb-service -n mariadb
 ```
 
 Output like this will be shown:
