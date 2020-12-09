@@ -1,11 +1,6 @@
 ## Create Instance of MariaDB 
 
-As Database will be stored at location: '/mnt/data' . These location should be created before applying the CR. Execute below command to create locations and provide permissions
-
-```
-mkdir /mnt/data
-chmod a+rwx /mnt/data
-```
+As Database will be stored at location: '/mnt/data' . These location should exists before applying the CR. 
 
 ### Create this CR which will create a database called test-db, along with user credentials
 
