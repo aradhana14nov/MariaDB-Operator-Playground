@@ -28,6 +28,12 @@
          "tutorial_name":"create-instance.md",
          "title":"Create Instance of MariaDB Cluster"
       },
+	  {
+         "description":"Access MariadB database",
+         "duration":"30 min",
+         "tutorial_name":"access-database.md",
+         "title":"Access MariadB database"
+      },
       {
          "description":"Schedule Backup of MariaDB",
          "duration":"30 min",
@@ -50,9 +56,9 @@
    ],
    "usefulLinks":[
       {
-         "title":"MariaDB Operator",
-         "description":"MariaDB Operator ",
-         "url":"https://operatorhub.io/operator/mariadb-operator-app"
+         "title":"Crunchy PostgreSQL Operator",
+         "description":"Crunchy PostgreSQL Operator ",
+         "url":"https://operatorhub.io/operator/postgresql"
       }
    ]
 }
