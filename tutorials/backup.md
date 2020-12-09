@@ -1,17 +1,12 @@
 ### MariaDB Backup 
 
-As Backup Files will be stored at location: '/mnt/backup'. This location should be created before applying the CR. Execute below command to create locations and provide permissions
-
-```
-mkdir /mnt/backup
-chmod a+rwx /mnt/backup
-```
+As Backup Files will be stored at location: '/mnt/backup'. This location should be created before applying the CR. 
 
 ### Create the below CR which will schedule backup of MariaDB at defined schedule. 
 
 **MariaDBBackup.yaml**
 
-```
+```execute
 cat <<'EOF' > MariaDBBackup.yaml
 apiVersion: mariadb.persistentsys/v1alpha1
 kind: Backup
@@ -33,7 +28,7 @@ EOF
 
 Execute below command to create MariaDBBackup instance:
 
-```
+```execute
 kubectl create -f MariaDBBackup.yaml -n mariadb
 ```
 
@@ -41,7 +36,7 @@ This CR will schedule backup of MariaDB at defined schedule. The Database backup
 
 To Ensure that cronjob is configured correctly, run below command:
 
-```
+```execute
 # kubectl get cronjob -n mariadb
 NAME             SCHEDULE    SUSPEND   ACTIVE   LAST SCHEDULE   AGE
 mariadb-backup   0 0 * * *   False     0        <none>          17m
