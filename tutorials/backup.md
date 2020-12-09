@@ -38,6 +38,9 @@ To Ensure that cronjob is configured correctly, run below command:
 
 ```execute
 # kubectl get cronjob -n mariadb
+```
+Output:
+```
 NAME             SCHEDULE    SUSPEND   ACTIVE   LAST SCHEDULE   AGE
 mariadb-backup   0 0 * * *   False     0        <none>          17m
 ```
