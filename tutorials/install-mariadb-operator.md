@@ -5,20 +5,16 @@
 MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` 
 Ensure that the path exists for Database files and has all necessary permissions.
 
-#### create directory for MariaDB operator using below command:
-
-```
-cd && mkdir Mariadb-Operator
-cd Mariadb-Operator
-```
 
 #### Execute below command to install the MariaDB operator from operatorhub:
 
-```
+```execute
 kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml
 ```
 
 This Operator will be installed in the "my-mariadb-operator-app" namespace and will be usable from this namespace only.
+
+Below is the yaml file used to install the operator.
 
 **mariadb-operator-app.yaml**
 
@@ -51,7 +47,7 @@ spec:
 
 #### After installation, watch your operator come up using next command.
 
-```
+```execute
 kubectl get csv -n my-mariadb-operator-app
 ```
 
