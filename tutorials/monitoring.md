@@ -48,12 +48,12 @@ Else proceed as follows:
 4. Follow Step 4.
 
 
-### Step1: Install Prometheus operator and Deploy Prometheus and InstanceServiceMonitor :
+### Step 1: Install Prometheus operator and Deploy Prometheus and InstanceServiceMonitor :
  
  Please go to Prometheus operator tutorial.
 
 
-### Step 2 Verify prometheus monitoring deployment :
+### Step 2: Verify prometheus monitoring deployment :
 
 Step 2.1: You can do forwarding to open prometheus UI locally.
 
@@ -65,7 +65,7 @@ Step 2.2: Verify metrics are present at [http://localhost:9090](http://localhost
 
 
 
-### Step 3 Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard: 
+### Step 3: Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard: 
 
 Please go to Grafana Operator tutorial 
 
