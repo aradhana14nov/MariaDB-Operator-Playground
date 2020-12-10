@@ -157,7 +157,7 @@ spec:
       type: prometheus
       url: 'http://prometheus-service:9090'
       version: 1
-  
+  name: example-datasources.yaml
 EOF
 ```
 
