@@ -4,7 +4,7 @@ As Backup Files will be stored at location: '/mnt/backup'. This location should 
 
 ### Create the below CR which will schedule backup of MariaDB at defined schedule. 
 
-**MariaDBBackup.yaml**
+#### MariaDBBackup.yaml
 
 ```execute
 cat <<'EOF' > MariaDBBackup.yaml
@@ -29,7 +29,7 @@ EOF
 Execute below command to create MariaDBBackup instance:
 
 ```execute
-kubectl create -f MariaDBBackup.yaml -n mariadb
+kubectl create -f MariaDBBackup.yaml -n my-mariadb-operator-app
 ```
 
 This CR will schedule backup of MariaDB at defined schedule. The Database backup files will be stored at location: '/mnt/backup'. 
@@ -47,7 +47,7 @@ mariadb-backup   0 0 * * *   False     0        <none>          17m
 
 At scheduled interval, a new Job will start to take database backup and create a backup file at defined location (default: /mnt/backup)
 
-## Setup Instructions
+### Setup Instructions
 
 Database backup files are stored at default location "/mnt/backup" and can be configured in Backup CR file. Ensure that this paths exist and have all necessary permissions.
 
