@@ -37,7 +37,7 @@ This CR will schedule backup of MariaDB at defined schedule. The Database backup
 To Ensure that cronjob is configured correctly, run below command:
 
 ```execute
-# kubectl get cronjob -n mariadb
+# kubectl get cronjob -n my-mariadb-operator-app
 ```
 Output:
 ```
