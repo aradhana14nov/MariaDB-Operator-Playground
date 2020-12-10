@@ -1,10 +1,15 @@
-## **What you'll learn in this course**
+---
+title: MariaDB Operator Tutorial
+description: This tutorial explains how to create and use MariaDB Operator
+---
 
-This course provides the hands-on with MariaDB Operator, including:
+### What you'll learn in this course
 
-- How to Install MariaDB Operator
-- Create Instance Of MariaDB Operator
-- How to access DB Instance and create database tables on MariaDB
-- How to Schedule backup of MariaDB at regular intervals
-- Enable monitoring services for MariaDB
+This course provides the hands-on with MariaDB Operator,including:
+
+How to Install MariaDB Operator
+Create Instance Of MariaDB Operator
+How to access DB Instance and create database tables on MariaDB
+How to Schedule backup of MariaDB at regular intervals
+Enable monitoring services for MariaDB
 
