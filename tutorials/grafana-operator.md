@@ -6,9 +6,7 @@ Install Grafana Operator from operatorhub.
 
 OperatorHub link: https://operatorhub.io/operator/grafana-operator
 
-Step 1:
-
-Install the Grafana operator by running the following command:
+Step 1: Install the Grafana operator by running the following command:
 
 ```execute
 $ kubectl create -f https://operatorhub.io/install/grafana-operator.yaml
@@ -60,18 +58,14 @@ spec:
 EOF
 ```
 
-Step 4:
-
-Execute below command to create Grafana instance:
+Step 4: Execute below command to create Grafana instance:
 
 ```execute
 kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
 ```
 
 
-Step 5:
-
-Get the associated Pods:
+Step 5: Get the associated Pods:
 
 ```execute
 kubectl get pods -n my-grafana-operator
