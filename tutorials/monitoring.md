@@ -42,9 +42,9 @@ To enable monitoring services, you need to :
 
 If you have already with above prerequisite then you can proceed with Step2 and Step4.
 Else proceed as follows: 
-1. Go to Prometheus Operator Tiles of this tutorial.
+1. Go to Prometheus Operator Tile of this tutorial.
 2. Follow Step 2.
-3. Go to Grafana Operator Tiles of this tutorial.
+3. Go to Grafana Operator Tile of this tutorial.
 4. Follow Step 4.
 
 
