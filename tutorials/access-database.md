@@ -1,6 +1,7 @@
 ### Access MariaDB.
 
 Execute the below commands to connect to the server and check for the newly created custom database (test-db)
+
 Step1:
 ```execute
 kubectl exec -it <podname> bash -n my-mariadb-operator-app
