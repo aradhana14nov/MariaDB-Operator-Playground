@@ -1,6 +1,6 @@
-## Create Instance of MariaDB 
+### Create Instance of MariaDB 
 
-As Database will be stored at location: '/mnt/data' . These location should exists before applying the CR. 
+As Database will be stored at location: '/mnt/data'.These location should exists before applying the CR. 
 
 ### Create this CR which will create a database called test-db, along with user credentials
 
@@ -43,7 +43,7 @@ Execute below command to create MariaDBserver instance :
 kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app 
 ```
 
-This CR with create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB CR file.
+This CR will create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB CR file.
 
 #### Verify MariaDB Deployment
 
@@ -100,7 +100,7 @@ Events:                   <none>
 
 
 
-## Setup Instructions
+### Setup Instructions
 
 MariaDB Database uses external location on host to store all DB files. This location is default set to "/mnt/data" in CR file.  Ensure that this paths exist and have all necessary permissions.
 
