@@ -101,7 +101,7 @@ kubectl get pods -n operators
 Step 1.7: Access the service :
 
 
-```execute
+```
 http://<IPaddress>:30100
 ```
 
