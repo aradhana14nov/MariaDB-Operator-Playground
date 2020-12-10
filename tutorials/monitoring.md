@@ -3,7 +3,7 @@
 Step1: Create CR for MariaDB Monitoring services.
 
 ```execute
-cat <<'EOF' > MariaDBmonitoring.yaml
+cat <<'EOF'> MariaDBmonitoring.yaml
 apiVersion: mariadb.persistentsys/v1alpha1
 kind: Monitor
 metadata:
@@ -18,7 +18,7 @@ spec:
   # Image name with version
   # Refer https://registry.hub.docker.com/r/prom/mysqld-exporter for more details
   image: "prom/mysqld-exporter"
-  EOF
+EOF
 ```
 
 Note: The database host and port should be correct for metrics to work.
@@ -27,7 +27,7 @@ Note: The database host and port should be correct for metrics to work.
 Step2: Execute below command to Create Instance of Monitoring 
 
 ```execute
-kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app
+kubectl create -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
 ```
 
 This CR will start Prometheus exporter pod and service. 
