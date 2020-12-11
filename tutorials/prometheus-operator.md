@@ -60,8 +60,8 @@ spec:
   serviceAccountName: prometheus
   securityContext: {}
   serviceMonitorSelector: 
-      matchLabels:
-        tier: monitor-app
+    matchLabels:
+      tier: monitor-app
   ruleSelector: {}
   alerting:
     alertmanagers:
