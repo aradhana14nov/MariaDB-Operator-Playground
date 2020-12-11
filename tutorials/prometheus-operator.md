@@ -59,7 +59,9 @@ spec:
   replicas: 2
   serviceAccountName: prometheus
   securityContext: {}
-  serviceMonitorSelector: {}
+  serviceMonitorSelector: 
+      matchLabels:
+        tier: monitor-app
   ruleSelector: {}
   alerting:
     alertmanagers:
