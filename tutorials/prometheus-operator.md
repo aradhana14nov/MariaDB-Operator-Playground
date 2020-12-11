@@ -7,7 +7,7 @@ description: This tutorial explains how to create Prometheus Operator
 ## Prometheus Operator and Deploy Prometheus Server and InstanceServiceMonitor
 
 
-### Install Prometheus Operator and Deploy Prometheus and InstanceServiceMonitor :
+### Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor :
 
 Install Prometheus operator from : 
 
