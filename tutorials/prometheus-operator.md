@@ -128,7 +128,7 @@ spec:
       tier: monitor-app
   endpoints:
     - interval: 20s
-      port: monitor
+      port: web
 EOF
 ```
 
