@@ -14,7 +14,7 @@ spec:
   # Database source to connect with for colleting metrics
   # Format: "<db-user>:<db-password>@(<dbhost>:<dbport>)/<dbname>">
   # Make approprite changes 
-  dataSourceName: "root:password@(67.228.231.203:30685)/test-db"
+  dataSourceName: "root:password@(67.228.231.203:30685)/testdb"
   # Image name with version
   # Refer https://registry.hub.docker.com/r/prom/mysqld-exporter for more details
   image: "prom/mysqld-exporter"
