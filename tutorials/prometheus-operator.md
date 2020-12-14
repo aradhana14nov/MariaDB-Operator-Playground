@@ -58,9 +58,10 @@ metadata:
 spec:
   replicas: 2
   serviceAccountName: prometheus
-  serviceMonitorSelector: 
+  serviceMonitorSelector:
     matchLabels:
-      app=MariaDB-Monitor  
+      app=MariaDB-Monitor
+      tier=monitor-app  
   ruleSelector:
     matchLabels:
       prometheus: prometheus  
@@ -112,9 +113,10 @@ cat <<'EOF' > ServiceMonitor.yaml
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: MariaDB-Monitor
+  name: MariaDB-ServiceMonitor
   labels:
-    app=MariaDB-Monitor    
+    app=MariaDB-Monitor
+    tier=monitor-app
   namespace: operators 
 spec:
   namespaceSelector:
