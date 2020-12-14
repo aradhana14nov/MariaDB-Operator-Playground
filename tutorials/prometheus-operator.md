@@ -60,7 +60,7 @@ spec:
   serviceAccountName: prometheus
   serviceMonitorSelector: 
     matchLabels:
-      name: MariaDB-Monitor  
+      app=MariaDB-Monitor  
   ruleSelector:
     matchLabels:
       prometheus: prometheus  
