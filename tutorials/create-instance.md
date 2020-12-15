@@ -41,7 +41,7 @@ spec:
 EOF
 ```
 
-Execute below command to create MariaDBserver instance :
+***Execute below command to create MariaDBserver instance :***
 
 ```execute
 kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app 
@@ -63,11 +63,12 @@ mariadb-operator-78c95468-m824g   1/1     Running   0          118s
 mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 ```
 
-Verify that "mariadb-service" is created.
+***Verify service is created :***
 
 ```execute
 kubectl get svc -n my-mariadb-operator-app 
 ```
+
 Output:
 ```
 NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
@@ -76,13 +77,14 @@ mariadb-operator-metrics   ClusterIP   10.110.31.195   <none>        8383/TCP,86
 mariadb-service            NodePort    10.102.17.13    <none>        80:30685/TCP        104s
 ```
 
-Service "mariadb-service" is a NodePort Service that exposes mariadb service on port 3306
+Service "mariadb-service" is a NodePort that exposes mariadb on port 3306
 
 ```execute
 kubectl describe service/mariadb-service -n my-mariadb-operator-app
 ```
 
-Output like this will be shown:
+Output:
+
 ```
 Name:                     mariadb-service
 Namespace:                mariadb
