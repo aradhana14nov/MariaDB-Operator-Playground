@@ -5,63 +5,63 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":"Objective",
+         "description":"objective of the tutorial",
          "duration":"30 min",
          "tutorial_name":"objective.md",
-         "title":"MariaDB Operator"
+         "title":"Objective"
       },
       {
-         "description":"Introduction of MariaDB Operator",
+         "description":"give introduction of mariadb operator",
          "duration":"30 min",
          "tutorial_name":"introduction.md",
          "title":"Introduction of MariaDB Operator"
       },
       	  {
-         "description":" Create Instance of MariaDB Cluster",
+         "description":"learn how to create Instance of MariaDB operator",
          "duration":"30 min",
          "tutorial_name":"create-instance.md",
-         "title":"Create Instance of MariaDB Cluster"
+         "title":"Create Instance of MariaDB"
       },
 	  {
-         "description":"Access MariadB database",
+         "description":"learn how to access MariadB database",
          "duration":"30 min",
          "tutorial_name":"access-database.md",
          "title":"Access MariadB database"
       },
       {
-         "description":"Schedule Backup of MariaDB",
+         "description":"how to schedule backup service of MariaDB Server",
          "duration":"30 min",
          "tutorial_name":"backup.md",
          "title":"Schedule Backup of MariaDB"
       },
       {
-         "description":" Enable Monitoring service on MariaDB",
+         "description":" how to enable monitoring service on MariaDB",
          "duration":"30 min",
          "tutorial_name":"monitoring.md",
-         "title":"Enable Monitoring service on MariaDB"
+         "title":"Enable Monitoring Service"
       },
 	  
 	  {
-         "description":"create Prometheus Operator",
+         "description":"create Prometheus Operator to enable monitoring services on MariaDB",
          "duration":"30 min",
          "tutorial_name":"prometheus-operator.md",
-         "title":"create Prometheus Operator to enable monitoring services on MariaDB"
+         "title":"Create Prometheus Operator"
       },
 	  {
-         "description":"create Grafana Operator",
+         "description":"create grafana operator to enable monitoring services on MariaDB",
          "duration":"30 min",
          "tutorial_name":"grafana-operator.md",
-         "title":"create Grafana Operator to enable monitoring services on MariaDB"
+         "title":"Create Grafana Operator"
       },
 	  {
          "description":"steps to cleanup Operator",
          "duration":"30 min",
          "tutorial_name":"cleanup.md.md",
-         "title":"steps to cleanup Operator"
+         "title":"Cleanup Operator"
       },
 	  
 	  {
-         "description":"Summary",
+         "description":"What we learnt so far",
          "duration":"30 min",
          "tutorial_name":"summary.md",
          "title":"Summary"
