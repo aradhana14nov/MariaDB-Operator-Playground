@@ -36,7 +36,7 @@ exit
 
 Step5:
 ```execute
-mysql -h <IP> -P 30685 -u root -ppassword
+mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
 step6:
