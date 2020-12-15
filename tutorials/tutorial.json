@@ -56,7 +56,7 @@
 	  {
          "description":"steps to cleanup Operator",
          "duration":"30 min",
-         "tutorial_name":"cleanup.md.md",
+         "tutorial_name":"cleanup.md",
          "title":"Cleanup Operator"
       },
 	  
