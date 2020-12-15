@@ -7,20 +7,20 @@ description: This tutorial explains how to cleanup Operator
 ### Cleaning Up Operator
 
 
-Step1: Delete the resources of the operator's by kubectl delete commands :
+***Delete the CRs of the operator's by kubectl delete commands :
 
- kubectl delete -f <yaml file to create instance of the operator> -n <namespace>
+kubectl delete -f <yaml file to create instance of the operator> -n <namespace>
  
- Example:
+Example:
  
  ```
  kubectl delete -f prometheusInstance.yaml -n operators
  ```
 
  
- - Delete the operator by following cmds:
+- Delete the operator by following cmds:
  
- kubectl delete -f <operator's yaml file>
+kubectl delete -f <operator's yaml file>
  
  Example:
  
@@ -28,9 +28,10 @@ Step1: Delete the resources of the operator's by kubectl delete commands :
  kubectl delete -f https://operatorhub.io/install/prometheus.yaml
  ```
  
- - Delete the PVC:
+- Delete the PVC:
  
  kubectl delete pvc <name-of-pvc> -n <namespace>
+ 
  
  Example:
  
@@ -38,7 +39,7 @@ Step1: Delete the resources of the operator's by kubectl delete commands :
  kubectl delete pvc mariadb-pv-claim -n my-mariadb-operator-app
  ```
  
- - Delete the yaml files as well:
+- Delete the yaml files as well:
  
  Example:
  
