@@ -11,7 +11,7 @@
          "title":"1: Objective"
       },
       {
-         "description":"give introduction of mariadb operator",
+         "description":"gives introduction of mariadb operator",
          "duration":"30 min",
          "tutorial_name":"introduction.md",
          "title":"2: Introduction of MariaDB Operator"
@@ -61,7 +61,7 @@
       },
 	  
 	  {
-         "description":"What we learnt so far",
+         "description":"What we have learnt so far",
          "duration":"30 min",
          "tutorial_name":"summary.md",
          "title":"10: Summary"
