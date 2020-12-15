@@ -126,8 +126,7 @@ spec:
       app: MariaDB-Monitor
   endpoints:
   - interval: 10s
-    scrapeTimeout: 10s
-    port: http-server
+    scrapeTimeout: 10s    
     targetPort: 9104
     port: web
     path: /metrics
