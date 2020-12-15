@@ -1,6 +1,11 @@
-### Create below CR to Enable Monitoring service to MariaDB
+---
+title: Prometheus Operator Tutorial
+description: This tutorial explains how to create Prometheus Operator
+---
 
-Step1: Create CR for MariaDB Monitoring services.
+### Enable Monitoring service to MariaDB 
+
+Step1: Create below CR for MariaDB Monitoring services.
 
 ```execute
 cat <<'EOF'> MariaDBmonitoring.yaml
@@ -37,14 +42,21 @@ This CR will start Prometheus exporter pod and service.
 ## Create monitoring resources :
 
 To enable monitoring services, you need to :
-1. Install Prometheus Operator and Deploy Prometheus and InstanceServiceMonitor 
+
+1. Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor 
+
 2. Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard
 
 If you have already with above prerequisite then you can proceed with Step2 and Step4.
+
 Else proceed as follows: 
-1. Go to Prometheus Operator Tile of this tutorial.
+
+1. Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor. Refer the Prometheus Operator section in the current tutorial.
+
 2. Follow Step 2.
-3. Go to Grafana Operator Tile of this tutorial.
+
+3. To Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard, refer the Grafana Operator section in the current tutorial.
+
 4. Follow Step 4.
 
 
