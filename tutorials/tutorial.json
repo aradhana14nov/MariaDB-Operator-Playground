@@ -40,6 +40,26 @@
          "tutorial_name":"monitoring.md",
          "title":"Enable Monitoring service on MariaDB"
       },
+	  
+	  {
+         "description":"create Prometheus Operator",
+         "duration":"30 min",
+         "tutorial_name":"prometheus-operator.md",
+         "title":"create Prometheus Operator to enable moitoring services on MariaDB"
+      },
+	  {
+         "description":"create Grafana Operator",
+         "duration":"30 min",
+         "tutorial_name":"grafana-operator.md",
+         "title":"create Grafana Operator to enable moitoring services on MariaDB"
+      },
+	  {
+         "description":"steps to cleanup Operator",
+         "duration":"30 min",
+         "tutorial_name":"cleanup.md.md",
+         "title":"steps to cleanup Operator"
+      },
+	  
 	  {
          "description":"Summary",
          "duration":"30 min",
