@@ -5,22 +5,22 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":"objective of the tutorial",
+         "description":"objective of this tutorial",
          "duration":"30 min",
          "tutorial_name":"objective.md",
-         "title":"Objective"
+         "title":"1: Objective"
       },
       {
          "description":"give introduction of mariadb operator",
          "duration":"30 min",
          "tutorial_name":"introduction.md",
-         "title":"Introduction of MariaDB Operator"
+         "title":"2: Introduction of MariaDB Operator"
       },
       	  {
          "description":"learn how to create Instance of MariaDB operator",
          "duration":"30 min",
          "tutorial_name":"create-instance.md",
-         "title":"Create Instance of MariaDB"
+         "title":"3: Create Instance of MariaDB"
       },
 	  {
          "description":"learn how to access MariadB database",
