@@ -16,7 +16,7 @@ Step 1: Install the Grafana operator by running the following command:
 
 
 ```execute
-$ kubectl create -f https://operatorhub.io/install/grafana-operator.yaml
+kubectl create -f https://operatorhub.io/install/grafana-operator.yaml
 ```
 
 
@@ -28,7 +28,7 @@ Step 2: watch your operator come up using next command.
 
 
 ```execute
-$ kubectl get csv -n my-grafana-operator
+kubectl get csv -n my-grafana-operator
 ```
 
 
