@@ -1,6 +1,6 @@
 ---
-title: Prometheus Operator Tutorial
-description: This tutorial explains how to create Prometheus Operator
+title: MariaDB Create Instance  Tutorial
+description: This tutorial explains how to create Instance of MariaDB Operator
 ---
 
 ### Create Instance of MariaDB 
