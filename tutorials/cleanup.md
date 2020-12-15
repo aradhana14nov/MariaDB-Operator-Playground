@@ -1,7 +1,6 @@
 ---
 title: MariaDB Operator cleanup Tutorial
-description: This tutorial explains how to cleanup Operator
----
+description: This tutorial explains how to cleanup Operator---
 
 
 ### Cleaning Up Operator
