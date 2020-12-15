@@ -1,6 +1,6 @@
 # Mariadb Operator
 
-<img src="C:\workspace-poc\operators-guide\mariadb-operator\mariadb-operator\_images\logo.PNG.jpg" style="zoom:50%;" />
+![](_images/logo.png)
 
 
 
