@@ -51,11 +51,11 @@ If you have already with above prerequisite then you can proceed with Step2 and 
 
 Else proceed as follows: 
 
-1. Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor. Refer the Prometheus Operator section in the current tutorial.
+1. To Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor, refer the Prometheus Operator section from the current tutorial.
 
 2. Follow Step 2.
 
-3. To Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard, refer the Grafana Operator section in the current tutorial.
+3. To Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard, refer the Grafana Operator section from the current tutorial.
 
 4. Follow Step 4.
 
