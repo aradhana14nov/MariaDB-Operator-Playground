@@ -10,61 +10,56 @@
          "tutorial_name":"objective.md",
          "title":"1: Objective"
       },
+      
       {
-         "description":"gives introduction of mariadb operator",
-         "duration":"30 min",
-         "tutorial_name":"introduction.md",
-         "title":"2: Introduction of MariaDB Operator"
-      },
-      	  {
          "description":"learn how to create Instance of MariaDB operator",
          "duration":"30 min",
          "tutorial_name":"create-instance.md",
-         "title":"3: Create Instance of MariaDB"
+         "title":"2: Create Instance of MariaDB"
       },
 	  {
          "description":"learn how to access MariadB database",
          "duration":"30 min",
          "tutorial_name":"access-database.md",
-         "title":"4: Access MariadB database"
+         "title":"3: Access MariadB database"
       },
       {
          "description":"how to schedule backup service of MariaDB Server",
          "duration":"30 min",
          "tutorial_name":"backup.md",
-         "title":"5: Schedule Backup of MariaDB"
+         "title":"4: Schedule Backup of MariaDB"
       },
       {
          "description":" how to enable monitoring service on MariaDB",
          "duration":"30 min",
          "tutorial_name":"monitoring.md",
-         "title":"6: Enable Monitoring Service"
+         "title":"5: Enable Monitoring Service"
       },
 	  
 	  {
          "description":"create Prometheus Operator to enable monitoring services on MariaDB",
          "duration":"30 min",
          "tutorial_name":"prometheus-operator.md",
-         "title":"7: Create Prometheus Operator"
+         "title":"6: Create Prometheus Operator"
       },
 	  {
          "description":"create grafana operator to enable monitoring services on MariaDB",
          "duration":"30 min",
          "tutorial_name":"grafana-operator.md",
-         "title":"8: Create Grafana Operator"
+         "title":"7: Create Grafana Operator"
       },
 	  {
          "description":"steps to cleanup Operator",
          "duration":"30 min",
          "tutorial_name":"cleanup.md",
-         "title":"9: Cleanup Operator"
+         "title":"8: Cleanup Operator"
       },
 	  
 	  {
          "description":"What we have learnt so far",
          "duration":"30 min",
          "tutorial_name":"summary.md",
-         "title":"10: Summary"
+         "title":"9: Summary"
       }
       
    ],
