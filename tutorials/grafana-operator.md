@@ -4,36 +4,43 @@ description: This tutorial explains how to create Grafana Operator
 ---
 
 
-
-## Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard
-
 ### Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard: 
+
 
 Install Grafana Operator from operatorhub.
 
 OperatorHub link: https://operatorhub.io/operator/grafana-operator
 
+
 Step 1: Install the Grafana operator by running the following command:
+
 
 ```execute
 $ kubectl create -f https://operatorhub.io/install/grafana-operator.yaml
 ```
 
+
 This Operator will be installed in the "my-grafana-operator" namespace and will be usable from this namespace only.
 
 
+
 Step 2: watch your operator come up using next command.
+
 
 ```execute
 $ kubectl get csv -n my-grafana-operator
 ```
 
+
 Note: If you are installing from operatorhub, then by default it installs the operator in my-grafana-operator namespace.
 Below steps assumes that its deployed in my-grafana-operator namespace. However you may do the changes.
 
-#### Deploy Grafana, Grafana Data Source and Grafana Dashboard:
+
+### Deploy Grafana, Grafana Data Source and Grafana Dashboard:
+
 
 Step 3:Create below CR which will create Instance of Grafana:
+
 
 ```execute
 cat <<'EOF' > GrafanaInstance.yaml
@@ -65,7 +72,9 @@ spec:
 EOF
 ```
 
+
 Step 4: Execute below command to create Grafana instance:
+
 
 ```execute
 kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
@@ -74,6 +83,7 @@ kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
 
 Step 5: Get the associated Pods:
 
+
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
@@ -81,6 +91,7 @@ kubectl get pods -n my-grafana-operator
 
 
 Step 6: Create below CR which will create Instance for Grafana Dashboard:
+
 
 ```execute
 cat <<'EOF' > simple-dashboard.json
@@ -125,13 +136,17 @@ spec:
 EOF
 ```
 
+
 Step 7: Execute below command to create Grafana dashboard instance:
+
 
 ```execute
 kubectl create -f simple-dashboard.json -n my-grafana-operator
 ```
 
+
 Step 8: Get the associated Pods:
+
 
 ```execute
 kubectl get pods -n my-grafana-operator
@@ -161,6 +176,7 @@ spec:
 EOF
 ```
 
+
 Step 10: Execute below command to create Grafana datasources instance:
 
 
@@ -168,7 +184,9 @@ Step 10: Execute below command to create Grafana datasources instance:
 kubectl create -f example-datasources.yaml -n my-grafana-operator
 ```
 
+
 Step 11: Get the associated Pods:
+
 
 
 ```execute
