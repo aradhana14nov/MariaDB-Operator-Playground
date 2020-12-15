@@ -5,7 +5,7 @@ description: This tutorial explains how to schedule backup of MariaDB
 
 ### Create the below CR which will schedule backup of MariaDB at defined schedule : 
 
-***MariaDBBackup.yaml**
+***MariaDBBackup.yaml***
 
 ```execute
 cat <<'EOF' > MariaDBBackup.yaml
@@ -39,7 +39,7 @@ As Backup Files will be stored at location: '/mnt/backup'. This location should 
 To Ensure that cronjob is configured correctly, run below command:
 
 ```execute
-# kubectl get cronjob -n my-mariadb-operator-app
+kubectl get cronjob -n my-mariadb-operator-app
 ```
 Output:
 ```
