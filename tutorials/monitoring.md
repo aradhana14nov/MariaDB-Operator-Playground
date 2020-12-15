@@ -1,6 +1,6 @@
 ---
-title: Prometheus Operator Tutorial
-description: This tutorial explains how to create Prometheus Operator
+title: Enable Monitoring to MariaDB
+description: This tutorial explains how to Enable Monitoring service to MariaDB
 ---
 
 ### Enable Monitoring service to MariaDB 
