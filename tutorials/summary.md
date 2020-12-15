@@ -12,3 +12,4 @@ You have learned :
 - How to access DB Instance and create database tables on MariaDB
 - How to Schedule backup of MariaDB at regular intervals
 - Enable monitoring services for MariaDB
+- Cleanup Operators
