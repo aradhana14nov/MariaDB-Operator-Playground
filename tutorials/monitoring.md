@@ -83,7 +83,7 @@ kubectl --namespace my-grafana-operator port-forward svc/grafana-service 3000
 
 Step 4.2:
 
-Verify Grafana Datasource is created at [http://localhost:3000](http://localhost:3000/)
+Verify Grafana Datasource is created at [http://##DNS.ip##:3000](http://##DNS.ip##:3000/)
 
 Import Grafana dashboard via UI. 
 
