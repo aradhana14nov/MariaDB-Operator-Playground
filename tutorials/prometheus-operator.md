@@ -89,7 +89,7 @@ Step 1.5: Execute below command to create Prometheus instance
 
 
 ```execute
-kubectl create -f prometheusInstance.yaml -n operators
+kubectl create -f prometheusInstance.yaml -n my-mariadb-operator-app
 ```
 
 
@@ -98,7 +98,7 @@ Step 1.6: Get the associated Pods:
 
 
 ```execute
-kubectl get pods -n operators
+kubectl get pods -n my-mariadb-operator-app
 ```
 
 
@@ -144,7 +144,7 @@ Step 1.9: Execute below command to create ServiceMonitor instance :
 
 
 ```execute
-kubectl create -f ServiceMonitor.yaml -n operators
+kubectl create -f ServiceMonitor.yaml -n my-mariadb-operator-app
 ```
 
 
@@ -153,6 +153,6 @@ Step 1.10: Get the associated Pods:
 
 
 ```execute
-kubectl get pods -n operators
+kubectl get pods -n my-mariadb-operator-app
 ```
 
