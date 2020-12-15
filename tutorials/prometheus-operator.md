@@ -38,7 +38,9 @@ Note: If you are installing from operatorhub, then by default it installs the op
 Below steps assumes that its deployed in operators namespace.
 
 
+
 Step 1.4: Create below CR which will create a Prometheus Instance along with a ServiceAccount and a Service of Type NodePort :
+
 
 ```execute
 cat <<'EOF' > prometheusInstance.yaml
@@ -81,19 +83,24 @@ spec:
 EOF
 ```
 
+
 Step 1.5: Execute below command to create Prometheus instance
+
 
 
 ```execute
 kubectl create -f prometheusInstance.yaml -n operators
 ```
 
+
 Step 1.6: Get the associated Pods:
+
 
 
 ```execute
 kubectl get pods -n operators
 ```
+
 
 Step 1.7: Access the service :
 
@@ -101,6 +108,7 @@ Step 1.7: Access the service :
 ```
 http://##DNS.ip##:30100
 ```
+
 
 
 Step 1.8: Create below CR which will create Instance of ServiceMonitor:
@@ -131,6 +139,7 @@ spec:
 EOF
 ```
 
+
 Step 1.9: Execute below command to create ServiceMonitor instance :
 
 
@@ -138,7 +147,9 @@ Step 1.9: Execute below command to create ServiceMonitor instance :
 kubectl create -f ServiceMonitor.yaml -n operators
 ```
 
-Step10: Get the associated Pods:
+
+Step 1.10: Get the associated Pods:
+
 
 
 ```execute
