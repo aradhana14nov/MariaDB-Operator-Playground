@@ -1,6 +1,6 @@
 ---
-title: Prometheus Operator Tutorial
-description: This tutorial explains how to create Prometheus Operator
+title: MariaDB Backup Tutorial
+description: This tutorial explains how to schedule backup of MariaDB
 ---
 
 ### MariaDB Backup 
