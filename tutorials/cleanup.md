@@ -18,7 +18,7 @@ Step1: Delete the resources of the operator's by kubectl delete commands :
  ```
 
  
- Delete the operator by following cmds:
+ - Delete the operator by following cmds:
  
  kubectl delete -f <operator's yaml file>
  
@@ -27,6 +27,24 @@ Step1: Delete the resources of the operator's by kubectl delete commands :
  ```
  kubectl delete -f https://operatorhub.io/install/prometheus.yaml
  ```
+ 
+ - Delete the PVC:
+ 
+ kubectl delete pvc <name-of-pvc> -n <namespace>
+ 
+ Example:
+ 
+ ```
+ kubectl delete pvc mariadb-pv-claim -n my-mariadb-operator-app
+ ```
+ 
+ - Delete the yaml files as well:
+ 
+ Example:
+ 
+  ```
+  rm prometheusInstance.yaml
+  ```
 
 
 ***Deleting the CSV resource and subscription***
