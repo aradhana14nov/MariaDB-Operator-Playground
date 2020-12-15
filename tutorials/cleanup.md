@@ -6,7 +6,7 @@ description: This tutorial explains how to cleanup Operator---
 ### Cleaning Up Operator
 
 
-***Delete the CRs of the operator's by kubectl delete commands :
+***Delete the CRs of the operator's by kubectl delete commands :***
 
 kubectl delete -f <yaml file to create instance of the operator> -n <namespace>
  
