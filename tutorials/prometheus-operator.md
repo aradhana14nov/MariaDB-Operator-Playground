@@ -101,7 +101,7 @@ Step 1.7: Access the service :
 
 
 ```
-http://<IPaddress>:30100
+http://##DNS.ip##:30100
 ```
 
 
