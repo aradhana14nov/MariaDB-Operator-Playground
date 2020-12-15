@@ -67,7 +67,7 @@ Else proceed as follows:
 
 ### Step 2: Verify prometheus monitoring deployment :
 
-Step 2.1: You can do forwarding to open prometheus UI locally.
+Step 2.1: You can do port forwarding to open prometheus UI locally.
 
 ```execute
 kubectl --namespace operators port-forward svc/prometheus-operated 9090
@@ -87,7 +87,7 @@ Please go to Grafana Operator tutorial
 
 Step 4.1:
 
-You can do forwarding to open grafana UI locally.
+You can do port forwarding to open grafana UI locally.
 
 ```execute
 kubectl --namespace my-grafana-operator port-forward svc/grafana-service 3000
