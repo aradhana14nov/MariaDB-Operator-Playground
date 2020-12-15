@@ -1,6 +1,6 @@
 # Mariadb Operator
 
-![](_images/logo.png)
+![](_images/logo.jpg)
 
 
 
