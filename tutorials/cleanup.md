@@ -1,5 +1,5 @@
 ---
-title: MariaDB Operator Tutorial
+title: MariaDB Operator cleanup Tutorial
 description: This tutorial explains how to cleanup Operator
 ---
 
