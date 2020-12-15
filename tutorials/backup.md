@@ -3,11 +3,9 @@ title: MariaDB Backup Tutorial
 description: This tutorial explains how to schedule backup of MariaDB
 ---
 
-### MariaDB Backup 
-
 ### Create the below CR which will schedule backup of MariaDB at defined schedule : 
 
-#### MariaDBBackup.yaml
+***MariaDBBackup.yaml**
 
 ```execute
 cat <<'EOF' > MariaDBBackup.yaml
