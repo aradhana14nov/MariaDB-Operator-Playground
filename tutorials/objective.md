@@ -1,6 +1,6 @@
 ---
-title: MariaDB Operator Tutorial
-description: This tutorial explains how to create and use MariaDB Operator
+title: Objective
+description: This tutorial explains Objective of this tutorial
 ---
 
 ### What you'll learn in this course :
