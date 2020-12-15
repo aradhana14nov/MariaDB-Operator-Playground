@@ -45,13 +45,13 @@
          "description":"create Prometheus Operator",
          "duration":"30 min",
          "tutorial_name":"prometheus-operator.md",
-         "title":"create Prometheus Operator to enable moitoring services on MariaDB"
+         "title":"create Prometheus Operator to enable monitoring services on MariaDB"
       },
 	  {
          "description":"create Grafana Operator",
          "duration":"30 min",
          "tutorial_name":"grafana-operator.md",
-         "title":"create Grafana Operator to enable moitoring services on MariaDB"
+         "title":"create Grafana Operator to enable monitoring services on MariaDB"
       },
 	  {
          "description":"steps to cleanup Operator",
