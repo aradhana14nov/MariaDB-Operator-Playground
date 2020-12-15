@@ -125,8 +125,12 @@ spec:
     matchLabels:
       app: MariaDB-Monitor
   endpoints:
-    - interval: 20s
-      port: 9104-tcp
+  - interval: 10s
+    scrapeTimeout: 10s
+    port: http-server
+    targetPort: 9104
+    port: web
+    path: /metrics
 EOF
 ```
 
