@@ -61,7 +61,7 @@ Step 2.1: You can do forwarding to open prometheus UI locally.
 kubectl --namespace operators port-forward svc/prometheus-operated 9090
 ```
 
-Step 2.2: Verify metrics are present at [http://localhost:9090](http://localhost:9090/)
+Step 2.2: Verify metrics are present at [http://##DNS.ip##:9090](http://##DNS.ip##:9090/)
 
 
 
