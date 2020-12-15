@@ -15,7 +15,7 @@ Operator Hub link: https://operatorhub.io/operator/prometheus
 Step 1.1: Install the Prometheus operator by running the following command:
 
 ```execute
-$ kubectl create -f https://operatorhub.io/install/prometheus.yaml
+kubectl create -f https://operatorhub.io/install/prometheus.yaml
 ```
 
 This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
@@ -24,13 +24,13 @@ This Operator will be installed in the "operators" namespace and will be usable 
 Step 1.2: watch your operator come up using next command:
 
 ```execute
-$ kubectl get csv -n operators
+kubectl get csv -n operators
 ```
 
 Step 1.3: Get the associated Pods:
 
 ```execute
-$ kubectl get pods -n operators
+kubectl get pods -n operators
 ```
 
 
