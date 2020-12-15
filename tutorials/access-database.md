@@ -5,18 +5,20 @@ description: This tutorial explains how to access MariaDB Database
 
 ### Access MariaDB Database 
 
-Execute the below commands to connect to the server and check for the newly created custom database (test-db)
+Execute below commands to connect with server and check for the newly created custom database (test-db)
 
 Step1:
+
 ```execute
 kubectl exec -it <podname> bash -n my-mariadb-operator-app
 ```
 Step2:
+
 ```execute
-mysql -h <IP> -P 30685 -u db-user -pdb-user
+mysql -h ##DNS.ip## -P 30685 -u db-user -pdb-user
 ```
 ```
-Note: <IP> is kubernetes cluster IP here.
+Note: IP is kubernetes cluster IP here.
 ```
   
 Step3:
@@ -26,10 +28,12 @@ show databases;
 ```
 Note: In order to create database table, login with root user creds using below command.
 ```
+
 Step4:
 ```execute
 exit
 ```
+
 Step5:
 ```execute
 mysql -h <IP> -P 30685 -u root -ppassword
@@ -39,17 +43,18 @@ step6:
 ```execute
 create database testdb;
 ```
-step6:
+
+step7:
 ```execute
 use testdb;
 ```
 
-step7:
+step8:
 ```execute
 create table names (name VARCHAR(100));
 ```
 
-step8:
+step9:
 ```execute
 insert into names values('Abhijit');
 ```
