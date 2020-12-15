@@ -8,18 +8,16 @@ description: This tutorial explains how to cleanup Operator---
 
 ***Delete the CRs of the operator's by kubectl delete commands :***
 
-kubectl delete -f <yaml file to create instance of the operator> -n <namespace>
  
 Example:
  
  ```
  kubectl delete -f prometheusInstance.yaml -n operators
  ```
-
+Note: Here prometheusInstance.yaml is the CR of the operator.
  
 - Delete the operator by following cmds:
  
-kubectl delete -f <operator's yaml file>
  
  Example:
  
@@ -29,9 +27,7 @@ kubectl delete -f <operator's yaml file>
  
 - Delete the PVC:
  
- kubectl delete pvc <name-of-pvc> -n <namespace>
- 
- 
+  
  Example:
  
  ```
