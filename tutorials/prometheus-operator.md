@@ -55,13 +55,13 @@ metadata:
   name: prometheus
   labels:
     prometheus: prometheus
+  namespace: operators
 spec:
-  replicas: 2
+  replicas: 1
   serviceAccountName: prometheus
   serviceMonitorSelector:
     matchLabels:
-      app: MariaDB-Monitor
-      tier: monitor-app  
+      app: MariaDB-Monitor       
   ruleSelector:
     matchLabels:
       prometheus: prometheus  
@@ -119,10 +119,9 @@ cat <<'EOF' > ServiceMonitor.yaml
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: MariaDB-ServiceMonitor
+  name: mariadb-servicemonitor
   labels:
-    app=MariaDB-Monitor
-    tier=monitor-app
+    app=MariaDB-Monitor    
   namespace: operators 
 spec:
   namespaceSelector:
@@ -132,10 +131,7 @@ spec:
       app: MariaDB-Monitor
   endpoints:
   - interval: 10s
-    scrapeTimeout: 10s    
-    targetPort: 9104
-    port: web
-    path: /metrics
+    port: monitor    
 EOF
 ```
 
