@@ -104,6 +104,7 @@ spec:
     targetPort: web
   selector:
     app: prometheus
+EOF
 ```
 
 
