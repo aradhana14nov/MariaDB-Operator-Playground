@@ -1,9 +1,5 @@
 # Mariadb Operator
 
-![](_images/logo.PNG)
-
-
-
 ### Overview:
 
 Mariadb Operator enables you to create MariaDB server and database easily by defining simple Custom Resource.The MariaDB Operator enables customers to deploy MariaDB Platform in a variety of database configurations in a Kubernetes environment and is a key technology for MariaDB’s cloud strategy.
