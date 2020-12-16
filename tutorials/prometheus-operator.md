@@ -61,10 +61,12 @@ spec:
   serviceAccountName: prometheus
   serviceMonitorSelector:
     matchLabels:
-      app: MariaDB-Monitor       
-  ruleSelector:
-    matchLabels:
-      prometheus: prometheus  
+      app: playgroungd      
+  alerting:
+    alertmanagers:
+      - namespace: operators
+        name: alertmanager-main
+        port: web  
 ---
 apiVersion: v1
 kind: Service
@@ -121,7 +123,7 @@ kind: ServiceMonitor
 metadata:
   name: mariadb-servicemonitor
   labels:
-    app=MariaDB-Monitor    
+    app: playgroungd    
   namespace: operators 
 spec:
   namespaceSelector:
