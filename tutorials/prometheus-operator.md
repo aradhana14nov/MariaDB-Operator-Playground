@@ -107,6 +107,11 @@ spec:
 EOF
 ```
 
+- Execute below command to create Prometheus Service:
+
+```execute
+kubectl create -f prometheus_service.yaml -n operators
+```
 
 Access the service :
 
