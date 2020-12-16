@@ -4,12 +4,7 @@
    "appTheme":"g90",
    "footer":"footer.md",
    "tutorials":[
-      {
-         "description":"objective of this tutorial",
-         "duration":"10 min",
-         "tutorial_name":"objective.md",
-         "title":"1: Objective"
-      },
+      
        {
          "description":"Check Operator Deployment Status",
          "duration":"10 min",
