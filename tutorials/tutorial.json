@@ -6,10 +6,16 @@
    "tutorials":[
       {
          "description":"objective of this tutorial",
-         "duration":"30 min",
+         "duration":"10 min",
          "tutorial_name":"objective.md",
          "title":"1: Objective"
       },
+       {
+         "description":"Check Operator Deployment Status",
+         "duration":"10 min",
+         "tutorial_name":"operator-status.md",
+         "title":"1: MariaDB Operator status check"
+      },	   
       
       {
          "description":"learn how to create Instance of MariaDB operator",
@@ -53,15 +59,8 @@
          "duration":"30 min",
          "tutorial_name":"cleanup.md",
          "title":"8: Cleanup Operator"
-      },
-	  
-	  {
-         "description":"What we have learnt so far",
-         "duration":"30 min",
-         "tutorial_name":"summary.md",
-         "title":"9: Summary"
       }
-      
+	
    ],
    "usefulLinks":[
       {
