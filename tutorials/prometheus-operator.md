@@ -64,9 +64,9 @@ spec:
       app: playgroungd      
   alerting:
     alertmanagers:
-      - namespace: operators
-        name: alertmanager-main
-        port: web  
+     - namespace: operators
+       name: alertmanager-main
+       port: web  
 ---
 apiVersion: v1
 kind: Service
