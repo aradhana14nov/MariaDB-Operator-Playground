@@ -44,44 +44,25 @@ Step 1.4: Create below CR which will create a Prometheus Instance along with a S
 
 ```execute
 cat <<'EOF' > prometheusInstance.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: prometheus
----
 apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
-  name: prometheus
+  name: server
   labels:
-    prometheus: prometheus
+    prometheus: k8s
   namespace: operators
 spec:
   replicas: 1
-  serviceAccountName: prometheus
+  serviceAccountName: prometheus-k8s
+  securityContext: {}
   serviceMonitorSelector:
     matchLabels:
-      app: playgroungd      
+      app: playground  
   alerting:
     alertmanagers:
-     - namespace: operators
-       name: alertmanager-main
-       port: web  
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: prometheus
-spec:
-  type: NodePort
-  ports:
-  - name: web
-    nodePort: 30100
-    port: 9090
-    protocol: TCP
-    targetPort: web
-  selector:
-    prometheus: prometheus
+      - namespace: operators
+        name: alertmanager-main
+        port: web  
 EOF
 ```
 
@@ -104,7 +85,29 @@ kubectl get pods -n operators
 ```
 
 
-Step 1.7: Access the service :
+Step 1.7: Create the service to access prometheus server
+
+
+```execute
+cat <<'EOF' > prometheus_service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+spec:
+  type: NodePort
+  ports:
+  - name: web
+    nodePort: 30100
+    port: 9090
+    protocol: TCP
+    targetPort: web
+  selector:
+    app: prometheus
+```
+
+
+Access the service :
 
 
 ```
@@ -121,19 +124,19 @@ cat <<'EOF' > ServiceMonitor.yaml
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: mariadb-servicemonitor
+  name: mariadb-monitor 
   labels:
-    app: playgroungd    
-  namespace: operators 
+    app: playground
+  namespace: operators
 spec:
   namespaceSelector:
     any: true
   selector:
     matchLabels:
-      app: MariaDB-Monitor
+      tier: monitor-app 
   endpoints:
-  - interval: 10s
-    port: monitor    
+   - interval: 20s
+     port: monitor    
 EOF
 ```
 
