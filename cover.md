@@ -21,6 +21,8 @@ Mariadb Operator enables you to create MariaDB server and database easily by def
 - Monitor metrics for mariadb node.
 
 
+
+
 This course will provide the hands-on with MariaDB Operator with following topics:
 
 1. How to Install MariaDB Operator
