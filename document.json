@@ -22,7 +22,7 @@
   "commands": [
     
     {
-      "description": "command to install the MariaDB operator from operatorhub",
+      "description": "Install Operator",
       "exec": "kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml"
     }
 
