@@ -104,10 +104,3 @@ External Traffic Policy:  Cluster
 Events:                   <none>
 ```
 
-
-
-### Setup Instructions
-
-MariaDB Database uses external location on host to store all DB files. This location is default set to "/mnt/data" in CR file.  Ensure that this paths exist and have all necessary permissions.
-
-Check if there are no existing Persistent Volumes defined for same locations. If so, delete those PVs before applying CRs
