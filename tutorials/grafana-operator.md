@@ -33,7 +33,7 @@ kubectl get csv -n my-grafana-operator
 
 
 Note: If you are installing from operatorhub, then by default it installs the operator in my-grafana-operator namespace.
-Below steps assumes that its deployed in my-grafana-operator namespace. However you may do the changes.
+Below steps assumes that its deployed in my-grafana-operator namespace. 
 
 
 ### Deploy Grafana, Grafana Data Source and Grafana Dashboard:
@@ -43,19 +43,19 @@ Step 3:Create below CR which will create Grafana Server Instance:
 
 
 ```execute
-cat <<'EOF' > GrafanaInstance.yaml
+cat <<'EOF' > grafana-server.yaml
 apiVersion: integreatly.org/v1alpha1
 kind: Grafana
 metadata:
-  name: example-grafana
+  name: mariadb-grafana
 spec:
   ingress:
     enabled: true
   config:
     auth:
-      disable_signout_menu: true
+      disable_signout_menu: false 
     auth.anonymous:
-      enabled: true
+      enabled: false
     log:
       level: warn
       mode: console
@@ -68,7 +68,6 @@ spec:
           operator: In
           values:
             - grafana
-
 EOF
 ```
 
@@ -77,7 +76,7 @@ Step 4: Execute below command to create Grafana instance:
 
 
 ```execute
-kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
+kubectl create -f grafana-server.yaml -n my-grafana-operator
 ```
 
 
@@ -90,16 +89,14 @@ kubectl get pods -n my-grafana-operator
 
 
 
-
-
 Step 6:Create below CR which will create Instance of Grafana Datasources :
 
 ```execute
-cat <<'EOF' > example-datasources.yaml
+cat <<'EOF' > prometheus-datasources.yaml
 apiVersion: integreatly.org/v1alpha1
 kind: GrafanaDataSource
 metadata:
-  name: example-grafanadatasource
+  name: prometheus-grafanadatasource
 spec:
   datasources:
     - access: proxy
@@ -109,9 +106,9 @@ spec:
         timeInterval: 5s
       name: Prometheus
       type: prometheus
-      url: 'http://prometheus-service:9090'
+      url: 'http://prometheus-operated.operators:9090'
       version: 1
-  name: example-datasources.yaml
+  name: prometheus-datasources.yaml  
 EOF
 ```
 
@@ -120,7 +117,7 @@ Step 7: Execute below command to create Grafana datasources instance:
 
 
 ```execute
-kubectl create -f example-datasources.yaml -n my-grafana-operator
+kubectl create -f prometheus-datasources.yaml -n my-grafana-operator
 ```
 
 
