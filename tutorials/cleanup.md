@@ -7,6 +7,8 @@ description: This tutorial explains how to cleanup Operator
 ### Cleaning Up Operator
 
 
+
+
 ***Delete the CRs of the operator's by kubectl delete commands :***
 
  
@@ -15,7 +17,9 @@ Example:
  ```
  kubectl delete -f MariaDBserver.yaml -n my-mariadb-operator-app 
  ```
+
 Note: Here MariaDBserver.yaml is the CR of the MariaDB Server Instance.
+Similarly,delete all the CRs.
  
 
 - Delete the operator by kubectl delete command:
@@ -61,7 +65,7 @@ kubectl delete csv/mariadb-operator.v0.0.4 -n my-mariadb-operator-app
 Example:
 
 ```
-kubectl get subscription -n operators
+kubectl get subscription -n my-mariadb-operator-app
 ```
 
 - Delete the subscription :
@@ -74,13 +78,13 @@ kubectl delete subscription/my-mariadb-operator-app -n my-mariadb-operator-app
 
 
  
-- Delete all the yaml files as well:
+- Delete all the yaml files:
  
  Example:
  
   ```
-  rm -f MariaDBserver.yaml
+  rm -rf MariaDBserver.yaml
   ```
-
+  
 
 
