@@ -13,19 +13,21 @@ description: This tutorial explains how to cleanup Operator
 Example:
  
  ```
- kubectl delete -f prometheusInstance.yaml -n operators
+ kubectl delete -f MariaDBserver.yaml -n my-mariadb-operator-app 
  ```
-Note: Here prometheusInstance.yaml is the CR of the operator.
+Note: Here MariaDBserver.yaml is the CR of the MariaDB Server Instance.
  
-- Delete the operator by following cmds:
+
+- Delete the operator by kubectl delete command:
  
  
  Example:
  
  ```
- kubectl delete -f https://operatorhub.io/install/prometheus.yaml
+ kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
+
 - Delete the PVC:
  
   
@@ -34,19 +36,11 @@ Note: Here prometheusInstance.yaml is the CR of the operator.
  ```
  kubectl delete pvc mariadb-pv-claim -n my-mariadb-operator-app
  ```
- 
-- Delete the yaml files as well:
- 
- Example:
- 
-  ```
-  rm prometheusInstance.yaml
-  ```
 
 
 ***Deleting the CSV resource and subscription***
 
-- Find the csv in the same namespace:
+- Find the csv in the all the namespace:
 
 Example:
 
@@ -77,4 +71,16 @@ Example:
 ```
 kubectl delete subscription/my-mariadb-operator-app -n my-mariadb-operator-app
 ```
+
+
+ 
+- Delete all the yaml files as well:
+ 
+ Example:
+ 
+  ```
+  rm -f MariaDBserver.yaml
+  ```
+
+
 
