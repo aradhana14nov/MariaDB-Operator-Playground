@@ -40,7 +40,7 @@ Note: Here MariaDBserver.yaml is the CR of the MariaDB Server Instance.
 
 ***Deleting the CSV resource and subscription***
 
-- Find the csv in the all the namespace:
+- Find the csv in the namespace
 
 Example:
 
@@ -48,7 +48,7 @@ Example:
 kubectl get csv -n operators
 ```
 
-- Delete the csv :
+- Delete that csv :
 
 Example:
 
@@ -56,7 +56,7 @@ Example:
 kubectl delete csv/mariadb-operator.v0.0.4 -n my-mariadb-operator-app
 ```
 
-- Get the Subscription in the same namespace :
+- Get the Subscription in the same namespace 
 
 Example:
 
