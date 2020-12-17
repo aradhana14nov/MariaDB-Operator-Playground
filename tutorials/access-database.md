@@ -38,7 +38,7 @@ mysql -h ##DNS.ip## -P 30685 -u db-user -pdb-user
 ```
 
 ```
-Note: IP is kubernetes cluster IP here.
+Note: IP is kubernetes cluster IP.
 ```
   
 Step3:
@@ -58,7 +58,7 @@ exit
 Step5:
 
 ```
-Note: In order to create database table, login with root user creds using below command:
+Note: In order to create database table, login with root user using below command:
 ```
 
 ```execute
