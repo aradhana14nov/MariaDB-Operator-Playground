@@ -1,6 +1,6 @@
 ---
 title: Check the MariaDB Operator status
-description: Ensure operator have been created successfully without any error
+description: This tutorial is to verify operator have been created successfully without any error
 ---
 
 
@@ -20,7 +20,8 @@ NAME                      DISPLAY            VERSION   REPLACES                 
 mariadb-operator.v0.0.4   Mariadb Operator   0.0.4     mariadb-operator.v0.0.3   Succeeded
 ```
 
-Note: Output PHASE should come as "Succeeded".
+Note: Once operator is successfully installed, Output PHASE should be as "Succeeded".
+
 
 - Get the associated Pods using below command:
 
