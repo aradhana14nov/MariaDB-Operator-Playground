@@ -9,13 +9,12 @@ Execute below commands to connect with server and check for the newly created cu
 
 Step1: 
 
-Get MariaDB Server Instance podname by using command :
+- Get MariaDB Server Instance podname by using command :
 
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
-```execute
-
+```
 
 Output:
 
@@ -26,7 +25,7 @@ mariadb-server-5dccfb7b59-rhxkm              1/1     Running   0          2d18h
 ```
 
 
-Copy below command and execute by adding MariaDB Server Instance podname.
+- Copy below command and execute by adding MariaDB Server Instance podname.
 
 ```copycommand
 kubectl exec -it <podname> bash -n my-mariadb-operator-app
@@ -37,49 +36,65 @@ Step2:
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u db-user -pdb-user
 ```
+
 ```
 Note: IP is kubernetes cluster IP here.
 ```
   
 Step3:
+
 ```execute
 show databases;
 ```
+
 ```
 Note: In order to create database table, login with root user creds using below command.
 ```
 
 Step4:
+
 ```execute
 exit
 ```
 
+
 Step5:
+
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
-step6:
+
+Step6:
+
 ```execute
 create database testdb;
 ```
 
-step7:
+
+Step7:
+
 ```execute
 use testdb;
 ```
 
-step8:
+
+Step8:
+
 ```execute
 create table names (name VARCHAR(100));
 ```
 
-step9:
+
+Step9:
+
 ```execute
 insert into names values('Abhijit');
 ```
 
-step9:
+
+Step10:
+
 ```execute
 select * from names;
 ```
