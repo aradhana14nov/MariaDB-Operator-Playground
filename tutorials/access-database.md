@@ -99,3 +99,9 @@ Step10:
 ```execute
 select * from names;
 ```
+
+Step11: Exit:
+
+```execute
+exit
+```
