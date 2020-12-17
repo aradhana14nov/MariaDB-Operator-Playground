@@ -87,9 +87,36 @@ Step 5: Check the associated Pods:
 kubectl get pods -n my-grafana-operator
 ```
 
+Step 6: Create below CR which will create services to Grafana :
 
 
-Step 6:Create below CR which will create Instance of Grafana Datasources :
+```execute
+cat <<'EOF' > grafana_service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+spec:
+  type: NodePort
+  ports:
+  - name: web
+    nodePort: 30101
+    port: 9090
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: grafana
+EOF
+```
+
+Step 7:Execute below command to create grafana Service:
+
+```execute
+kubectl create -f grafana_service.yaml -n my-grafana-operator
+```
+
+
+Step 8:Create below CR which will create Instance of Grafana Datasources :
 
 ```execute
 cat <<'EOF' > prometheus-datasources.yaml
@@ -113,7 +140,7 @@ EOF
 ```
 
 
-Step 7: Execute below command to create Grafana datasources instance:
+Step 9: Execute below command to create Grafana datasources instance:
 
 
 ```execute
@@ -121,7 +148,7 @@ kubectl create -f prometheus-datasources.yaml -n my-grafana-operator
 ```
 
 
-Step 8: Check the associated Pods:
+Step 10: Check the associated Pods:
 
 
 
