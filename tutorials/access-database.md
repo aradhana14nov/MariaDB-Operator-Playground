@@ -47,9 +47,6 @@ Step3:
 show databases;
 ```
 
-```
-Note: In order to create database table, login with root user creds using below command.
-```
 
 Step4:
 
@@ -59,6 +56,10 @@ exit
 
 
 Step5:
+
+```
+Note: In order to create database table, login with root user creds using below command:
+```
 
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
