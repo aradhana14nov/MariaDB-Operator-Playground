@@ -39,7 +39,7 @@ Below steps assumes that its deployed in my-grafana-operator namespace. However 
 ### Deploy Grafana, Grafana Data Source and Grafana Dashboard:
 
 
-Step 3:Create below CR which will create Instance of Grafana:
+Step 3:Create below CR which will create Grafana Server Instance:
 
 
 ```execute
@@ -81,7 +81,7 @@ kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
 ```
 
 
-Step 5: Get the associated Pods:
+Step 5: Check the associated Pods:
 
 
 ```execute
@@ -90,70 +90,9 @@ kubectl get pods -n my-grafana-operator
 
 
 
-Step 6: Create below CR which will create Instance for Grafana Dashboard:
 
 
-```execute
-cat <<'EOF' > simple-dashboard.json
-apiVersion: integreatly.org/v1alpha1
-kind: GrafanaDashboard
-metadata:
-  labels:
-    app: grafana
-  name: simple-dashboard
-spec:
-  json: |
-    {
-      "id": null,
-      "title": "Simple Dashboard",
-      "tags": [],
-      "style": "dark",
-      "timezone": "browser",
-      "editable": true,
-      "hideControls": false,
-      "graphTooltip": 1,
-      "panels": [],
-      "time": {
-        "from": "now-6h",
-        "to": "now"
-      },
-      "timepicker": {
-        "time_options": [],
-        "refresh_intervals": []
-      },
-      "templating": {
-        "list": []
-      },
-      "annotations": {
-        "list": []
-      },
-      "refresh": "5s",
-      "schemaVersion": 17,
-      "version": 0,
-      "links": []
-    }
- 
-EOF
-```
-
-
-Step 7: Execute below command to create Grafana dashboard instance:
-
-
-```execute
-kubectl create -f simple-dashboard.json -n my-grafana-operator
-```
-
-
-Step 8: Get the associated Pods:
-
-
-```execute
-kubectl get pods -n my-grafana-operator
-```
-
-
-Step 9:Create below CR which will create Instance of Grafana Datasources :
+Step 6:Create below CR which will create Instance of Grafana Datasources :
 
 ```execute
 cat <<'EOF' > example-datasources.yaml
@@ -177,7 +116,7 @@ EOF
 ```
 
 
-Step 10: Execute below command to create Grafana datasources instance:
+Step 7: Execute below command to create Grafana datasources instance:
 
 
 ```execute
@@ -185,7 +124,7 @@ kubectl create -f example-datasources.yaml -n my-grafana-operator
 ```
 
 
-Step 11: Get the associated Pods:
+Step 8: Check the associated Pods:
 
 
 
