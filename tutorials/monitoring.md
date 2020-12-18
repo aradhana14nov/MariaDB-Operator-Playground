@@ -85,26 +85,17 @@ Please go to Grafana Operator tutorial
 
 ### Step 4: Verify Grafana monitoring deployment
 
-Step 4.1:
 
-You can do port forwarding to open grafana UI locally.
-
-```execute
-kubectl --namespace my-grafana-operator port-forward svc/grafana-service 3000
-```
-
-Step 4.2:
-
-Verify Grafana Datasource is created at [http://##DNS.ip##:3000](http://##DNS.ip##:3000/)
+Verify Grafana Datasource is created at [http://##DNS.ip##:30101](http://##DNS.ip##:30101/)
 
 
-Import Grafana dashboard via UI. 
+### Import Grafana dashboard via Grafana UI
 
-You can use below sample dashboard:
+Save below MariaDBDashboard.json on your local system. 
+We need to import this json file from Grafana UI.
 
 
 MariaDBDashboard.json
-
 
 ```
 {
