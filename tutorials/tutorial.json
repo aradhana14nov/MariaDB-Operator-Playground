@@ -14,19 +14,19 @@
       
       {
          "description":"learn how to create Instance of MariaDB operator",
-         "duration":"30 min",
+         "duration":"10 min",
          "tutorial_name":"create-instance.md",
          "title":"2: Create Instance of MariaDB"
       },
 	  {
          "description":"learn how to access MariadB database",
-         "duration":"30 min",
+         "duration":"10 min",
          "tutorial_name":"access-database.md",
          "title":"3: Access MariadB database"
       },
       {
          "description":"how to schedule backup service of MariaDB Server",
-         "duration":"30 min",
+         "duration":"10 min",
          "tutorial_name":"backup.md",
          "title":"4: Schedule Backup of MariaDB"
       },
@@ -51,7 +51,7 @@
       },
 	  {
          "description":"steps to cleanup Operator",
-         "duration":"30 min",
+         "duration":"10 min",
          "tutorial_name":"cleanup.md",
          "title":"8: Cleanup Operator"
       }
