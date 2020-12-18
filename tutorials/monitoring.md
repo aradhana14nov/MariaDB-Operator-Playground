@@ -67,17 +67,13 @@ Else proceed as follows:
 
 ### Step 2: Verify prometheus monitoring deployment :
 
-Step 2.1: You can do port forwarding to open prometheus UI locally.
 
-```execute
-kubectl --namespace operators port-forward svc/prometheus-operated 9090
-```
-
-Step 2.2: Verify metrics are present at [http://##DNS.ip##:9090](http://##DNS.ip##:9090/)
+Verify metrics are present at [http://##DNS.ip##:30100](http://##DNS.ip##:30100/)
 
 
 
 ### Step 3: Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard: 
+
 
 Please go to Grafana Operator tutorial 
 
