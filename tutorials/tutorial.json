@@ -49,11 +49,18 @@
          "tutorial_name":"grafana-operator.md",
          "title":"7: Create Grafana Operator"
       },
+	 {
+         "description":"Grafana Dashboard to visualize MariaDB Monitoring Metrics",
+         "duration":"30 min",
+         "tutorial_name":"access-grafana-dashboard-to-see-mariadb-server-metrics.md",
+         "title":"8: Grafana Dashboard"
+      },
+       	   
 	  {
          "description":"steps to cleanup Operator",
          "duration":"10 min",
          "tutorial_name":"cleanup.md",
-         "title":"8: Cleanup Operator"
+         "title":"9: Cleanup Operator"
       }
 	
    ],
