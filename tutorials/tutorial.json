@@ -53,7 +53,7 @@
          "description":" create Grafana Dashboard to visualise MariaDB Metrics",
          "duration":"30 min",
          "tutorial_name":"access-grafana-dashboard.md",
-         "title":"5: Grafana Dashboard"
+         "title":"8: Grafana Dashboard"
       },
        	   
 	  {
