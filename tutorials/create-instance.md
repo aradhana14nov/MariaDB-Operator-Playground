@@ -6,7 +6,7 @@ description: This tutorial explains how to create Instance of MariaDB Operator
 ### Create Instance of MariaDB 
 
 
-***Create below CR which will create a database called test-db, along with user credentials:***
+***Create below yaml which will create a CR for MariaDB Server Instance and also create database called test-db, along with user credentials:***
 
 ```execute
 cat <<'EOF' > MariaDBserver.yaml
@@ -51,7 +51,7 @@ This CR will create a database called `test-db`, along with user credentials. Th
 
 ### Verify MariaDB Deployment
 
-***Verify list of pods:*** 
+***Verify pods status:*** 
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app 
@@ -63,7 +63,7 @@ mariadb-operator-78c95468-m824g   1/1     Running   0          118s
 mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 ```
 
-***Verify service is created :***
+***Verify services:***
 
 ```execute
 kubectl get svc -n my-mariadb-operator-app 
