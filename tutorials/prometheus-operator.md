@@ -197,6 +197,12 @@ Step 6: Execute below command to create ServiceMonitor instance :
 kubectl create -f ServiceMonitor.yaml -n operators
 ```
 
+Output:
+
+```
+servicemonitor.monitoring.coreos.com/mariadb-monitor created
+```
+
 
 - Get the associated Pods:
 
