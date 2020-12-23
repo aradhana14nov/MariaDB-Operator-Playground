@@ -6,7 +6,7 @@ description: This tutorial explains how to create Instance of MariaDB Operator
 ### Create Instance of MariaDB 
 
 
-***Create below yaml which will create a CR for MariaDB Server Instance and also create database called test-db, along with user credentials:***
+***Create below yaml which will create a Custom Resource for MariaDB Server Instance and also create database called test-db, along with user credentials:***
 
 ```execute
 cat <<'EOF' > MariaDBserver.yaml
