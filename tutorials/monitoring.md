@@ -114,7 +114,7 @@ Please go to Grafana Operator tutorial
 
 
 
-### Step 4: Access and Configure Grafana dashboard via Grafana UI
+### Step 4: Access Grafana dashboard
 
 
 - Execute below command to get all services in "my-grafana-operator" namespace.
@@ -167,6 +167,11 @@ Now you will be able to see the Dashboard like below:
 
 
 ![](_images/dashboard.png)
+
+
+### Configure Grafana Dashboard to visualise MariaDB monitoring metrics
+
+Please go to Grafana Dashboard tutorial
 
 
 
