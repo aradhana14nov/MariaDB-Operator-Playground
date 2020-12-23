@@ -7,7 +7,7 @@ description: This tutorial is to verify operator have been created successfully 
 ### Check the status of MariaDB Operator
 
 
-- watch your operator come up using below command :
+- After MariaDB Operator installation, verify that your operator got successfully installed by executing the below command.
 
 ```execute
 kubectl get csv -n my-mariadb-operator-app
@@ -23,7 +23,7 @@ mariadb-operator.v0.0.4   Mariadb Operator   0.0.4     mariadb-operator.v0.0.3  
 Note: Once operator is successfully installed, Output PHASE should be as "Succeeded".
 
 
-- Get the associated Pods using below command:
+- Check the Pods status using below command:
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
