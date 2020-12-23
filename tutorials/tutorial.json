@@ -52,7 +52,7 @@
 	 {
          "description":"Grafana Dashboard to visualize MariaDB Monitoring Metrics",
          "duration":"30 min",
-         "tutorial_name":"access-grafana-dashboard-to-see-mariadb-server-metrics.md",
+         "tutorial_name":"access-grafana-dashboard.md",
          "title":"8: Grafana Dashboard"
       },
        	   
