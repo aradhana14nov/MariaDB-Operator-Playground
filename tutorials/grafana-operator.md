@@ -24,11 +24,32 @@ This Operator will be installed in the "my-grafana-operator" namespace and will 
 
 
 
-Step 2: watch your operator come up using next command.
-
+Step 2: After installation, verify that your operator got successfully installed by executing the below command.
 
 ```execute
 kubectl get csv -n my-grafana-operator
+```
+
+You should see a similar output as below.
+
+```output
+NAME                      DISPLAY            VERSION   REPLACES                  PHASE
+grafana-operator.v3.2.0   Grafana Operator   3.2.0     grafana-operator.v3.0.2   Succeeded
+```
+
+**Please wait till `PHASE` status will be `Succeeded` and then proceed further.**
+
+After the installation is successful , you can check your operator pods by executing the below command.
+
+```execute
+kubectl get pods -n my-grafana-operator
+```
+
+You should see a pod starting with 'grafana-operator' with Ready value '1/1' and Status 'Running' like the output below.
+
+```output
+NAME                                READY   STATUS    RESTARTS   AGE
+grafana-operator-7574bbdbc9-skdk8   1/1     Running   0          45s
 ```
 
 
@@ -36,10 +57,10 @@ Note: If you are installing from operatorhub, then by default it installs the op
 Below steps assumes that its deployed in my-grafana-operator namespace. 
 
 
-### Deploy Grafana, Grafana Data Source and Grafana Dashboard:
+### Deploy Grafana Server Instance and Grafana Data-Source:
 
 
-Step 3:Create below CR which will create Grafana Server Instance:
+Step 3:###  Create below yaml definition of the Custom Resource to create Grafana Instance
 
 
 ```execute
@@ -79,15 +100,32 @@ Step 4: Execute below command to create Grafana instance:
 kubectl create -f grafana-server.yaml -n my-grafana-operator
 ```
 
+You will see the following resources created:
 
-Step 5: Check the associated Pods:
+```output
+grafana.integreatly.org/example-grafana created
+```
 
+
+
+
+Step 5: Check pods status:
 
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
 
-Step 6: Create below CR which will create services to Grafana :
+Output:
+
+```output
+NAME                                  READY   STATUS    RESTARTS   AGE
+grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
+grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
+```
+
+
+
+Step 6: Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort:
 
 
 ```execute
@@ -116,7 +154,7 @@ kubectl create -f grafana_service.yaml -n my-grafana-operator
 ```
 
 
-Step 8:Create below CR which will create Instance of Grafana Datasources :
+Step 8: Create below yaml definition of the Custom Resource to create Instance of Grafana Datasources :
 
 ```execute
 cat <<'EOF' > prometheus-datasources.yaml
@@ -139,12 +177,19 @@ spec:
 EOF
 ```
 
+Here we are choosing Prometheus as our datasourse.
 
-Step 9: Execute below command to create Grafana datasources instance:
+Step 9:Execute below command to create instance of Grafana datasourse:
 
 
 ```execute
 kubectl create -f prometheus-datasources.yaml -n my-grafana-operator
+```
+
+Output:
+
+```
+grafanadatasource.integreatly.org/prometheus-grafanadatasource created
 ```
 
 
