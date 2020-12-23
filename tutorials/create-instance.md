@@ -71,10 +71,9 @@ kubectl get svc -n my-mariadb-operator-app
 
 Output:
 ```
-NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
-mariadb-backup-service     ClusterIP   10.96.69.127    <none>        3306/TCP            103s
-mariadb-operator-metrics   ClusterIP   10.110.31.195   <none>        8383/TCP,8686/TCP   105s
-mariadb-service            NodePort    10.102.17.13    <none>        80:30685/TCP        104s
+NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+mariadb-operator-metrics   ClusterIP   10.98.179.105    <none>        8383/TCP,8686/TCP   101s
+mariadb-service            NodePort    10.105.103.156   <none>        80:30685/TCP        73s
 ```
 
 Service "mariadb-service" is a NodePort that exposes mariadb on port 3306
