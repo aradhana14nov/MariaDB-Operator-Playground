@@ -88,8 +88,23 @@ Else proceed as follows:
 
 ### Step 2: Verify prometheus monitoring metrics :
 
+Access the Prometheus dashboard using below link:
 
-Verify metrics are present at [http://##DNS.ip##:30100](http://##DNS.ip##:30100/)
+http://##DNS.ip##:30100
+
+
+- On the prometheus UI, Go to Status -> Targets to see endpoints.
+
+
+ ![](_images/targets.PNG)
+
+
+
+- From the dropdown you can select the query and click on "Execute" to see MariaDB Metrics. See below snapshot :
+
+
+![](_images/queryexecution.PNG)
+
 
 
 
@@ -100,10 +115,59 @@ Please go to Grafana Operator tutorial
 
 
 
-### Step 4: Verify Grafana dashboard is accessible
+### Step 4: Access and Configure Grafana dashboard via Grafana UI
 
 
-Verify Grafana Dashboard is accessible at [http://##DNS.ip##:30101](http://##DNS.ip##:30101/)
+- Execute below command to get all services in "my-grafana-operator" namespace.
+
+
+```execute
+kubectl get svc -n my-grafana-operator
+```
+
+
+Output :
+
+```
+NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+grafana-operator-metrics   ClusterIP   10.96.188.27     <none>        8080/TCP         83s
+grafana-service            ClusterIP   10.105.85.60     <none>        3000/TCP         47s
+grafana-svc                NodePort    10.109.242.171   <none>        3000:30101/TCP   7s
+```
+
+Port value of "grafana-svc" Service NodePort is : 30101
+
+
+We can access the Grafana dashboard on the nodePort : 30101 using below url:
+
+
+Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30101</a> to access Grafana Dashboard from your browser.
+
+
+You will see the Grafana page loading as below :
+
+
+![](_images/load.png)
+
+
+Now click on the `Sign In` button as below :
+
+![](_images/signin.png)
+
+You will now need to log in to Grafana Dashboard with the following credentials in the page below:
+
+
+```
+user: root
+password: secret
+```
+![](_images/login.png)
+
+
+Now you will be able to see the Dashboard like below:
+
+
+![](_images/dashboard.png)
 
 
 
