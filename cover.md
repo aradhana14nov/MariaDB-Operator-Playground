@@ -21,12 +21,12 @@ Mariadb Operator enables you to create MariaDB server and database easily by def
 - Monitor metrics for mariadb node.
 
 
+### Objective of tutorial
 
+In this tutorial,we are going to cover following topics:
 
-This tutorial will cover MariaDB Operator with following topics:
-
-1. How to Install MariaDB Operator
-2. Create Instance Of MariaDB Operator
+1. How to Install MariaDB Operator and verify its successful installation.
+2. Create Instance Of MariaDB Operator and verify status of pods and services.
 3. How to access DB Instance and create database tables on MariaDB
 4. How to Schedule backup of MariaDB at regular intervals
 5. Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
