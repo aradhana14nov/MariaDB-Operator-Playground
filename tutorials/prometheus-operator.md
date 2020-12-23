@@ -12,34 +12,58 @@ description: This tutorial explains how to create Prometheus Operator
 Operator Hub link: https://operatorhub.io/operator/prometheus
 
 
-Step 1.1: Install the Prometheus operator by running the following command:
+Step 1 : Install the Prometheus operator by running the following command:
 
 ```execute
 kubectl create -f https://operatorhub.io/install/prometheus.yaml
 ```
 
+Output:
+
+```
+subscription.operators.coreos.com/my-prometheus created
+```
+
 This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
 
 
-Step 1.2: watch your operator come up using next command:
+- After Operator installation, verify that your operator got successfully installed by executing the below command.:
 
 ```execute
 kubectl get csv -n operators
 ```
 
-Step 1.3: Get the associated Pods:
+Output:
+
+```
+NAME                        DISPLAY               VERSION   REPLACES                    PHASE
+prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0.32.0   Succeeded
+```
+
+From above output, once operator is successfully installed, **PHASE** will be as "Succeeded" 
+
+- Check the Pods status using below command::
 
 ```execute
 kubectl get pods -n operators
 ```
 
+Output:
 
-Note: If you are installing from operatorhub, then by default it installs the operator in operators namespace.
+```
+NAME                                   READY   STATUS    RESTARTS   AGE
+prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          8m35s
+```
+
+In above output, STATUS as "Running" shows the pods are up and running.
+
+
+If you are installing from operatorhub, then by default it installs the operator in operators namespace.
 Below steps assumes that its deployed in operators namespace.
 
 
 
-Step 1.4: Create below CR which will create a Prometheus Instance along with a ServiceAccount and a Service of Type NodePort :
+Step 2: Create below yaml definition of the Custom Resource to create a Prometheus Instance along with a ServiceAccount and a Service of Type NodePort :
 
 
 ```execute
@@ -67,7 +91,7 @@ EOF
 ```
 
 
-Step 1.5: Execute below command to create Prometheus instance
+Step 3: Execute below command to create Prometheus instance
 
 
 
@@ -75,8 +99,14 @@ Step 1.5: Execute below command to create Prometheus instance
 kubectl create -f prometheusInstance.yaml -n operators
 ```
 
+Output:
 
-Step 1.6: Get the associated Pods:
+```
+prometheus.monitoring.coreos.com/server created
+```
+
+
+- Check the pods status using below commands:
 
 
 
@@ -84,8 +114,15 @@ Step 1.6: Get the associated Pods:
 kubectl get pods -n operators
 ```
 
+Output:
 
-Step 1.7: Create the service to access prometheus server
+```
+NAME                                   READY   STATUS    RESTARTS   AGE
+prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          14m
+prometheus-server-0                    3/3     Running   1          40s
+```
+
+Step 4: Create below yaml definition of the Custom Resource to create the service to access prometheus server
 
 
 ```execute
@@ -113,16 +150,22 @@ EOF
 kubectl create -f prometheus_service.yaml -n operators
 ```
 
-Access the service :
-
+Output:
 
 ```
+service/prometheus created
+```
+
+- Access the service :
+
+
+Access the Prometheus dashboard using below link:
+
 http://##DNS.ip##:30100
-```
 
 
 
-Step 1.8: Create below CR which will create Instance of ServiceMonitor:
+Step 5: Create below yaml definition of the Custom Resource to create Instance of ServiceMonitor:
 
 
 ```execute
@@ -147,7 +190,7 @@ EOF
 ```
 
 
-Step 1.9: Execute below command to create ServiceMonitor instance :
+Step 6: Execute below command to create ServiceMonitor instance :
 
 
 ```execute
@@ -155,7 +198,7 @@ kubectl create -f ServiceMonitor.yaml -n operators
 ```
 
 
-Step 1.10: Get the associated Pods:
+- Get the associated Pods:
 
 
 
