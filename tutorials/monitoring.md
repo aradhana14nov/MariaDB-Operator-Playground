@@ -45,26 +45,26 @@ To enable monitoring services, you need to :
 
 1. Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor 
 
-2. Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard
+2. Install Grafana Operator and Deploy Grafana Server Instance and Grafana Data-Source
 
 If above prerequisites are already fullfilled, you can proceed with Step2 and Step4.
 
 Else proceed as follows: 
 
 
-### Step 1: Install Prometheus operator and Deploy Prometheus and InstanceServiceMonitor :
+### Step 1: Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor :
  
  Please go to Prometheus operator tutorial.
 
 
-### Step 2: Verify prometheus monitoring deployment :
+### Step 2: Verify prometheus monitoring metrics :
 
 
 Verify metrics are present at [http://##DNS.ip##:30100](http://##DNS.ip##:30100/)
 
 
 
-### Step 3: Install Grafana Operator and Deploy Grafana ServerGr and Gafana Data Source: 
+### Step 3: Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source: 
 
 
 Please go to Grafana Operator tutorial 
