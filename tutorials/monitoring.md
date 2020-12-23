@@ -128,13 +128,13 @@ kubectl get svc -n my-grafana-operator
 Output :
 
 ```
-NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
-grafana-operator-metrics   ClusterIP   10.96.188.27     <none>        8080/TCP         83s
-grafana-service            ClusterIP   10.105.85.60     <none>        3000/TCP         47s
-grafana-svc                NodePort    10.109.242.171   <none>        3000:30101/TCP   7s
+NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+grafana                    NodePort    10.101.18.57    <none>        9090:30101/TCP   5m31s
+grafana-operator-metrics   ClusterIP   10.99.122.95    <none>        8080/TCP         6m45s
+grafana-service            ClusterIP   10.109.139.18   <none>        3000/TCP         5m53s
 ```
 
-Port value of "grafana-svc" Service NodePort is : 30101
+Port value of "grafana" Service NodePort is : 30101
 
 
 We can access the Grafana dashboard on the nodePort : 30101 using below url:
