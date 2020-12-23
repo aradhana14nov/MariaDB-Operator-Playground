@@ -60,7 +60,7 @@ Below steps assumes that its deployed in my-grafana-operator namespace.
 ### Deploy Grafana Server Instance and Grafana Data-Source:
 
 
-Step 3:###  Create below yaml definition of the Custom Resource to create Grafana Instance
+Step 3: Create below yaml definition of the Custom Resource to create Grafana Instance
 
 
 ```execute
