@@ -3,7 +3,7 @@ title: MariaDB Backup Tutorial
 description: This tutorial explains how to schedule backup of MariaDB
 ---
 
-### Create below yaml to create CR for MariaDB Backup : 
+### create below yaml definition of the Custom Resource to create CR for MariaDB Backup : 
 
 ***MariaDBBackup.yaml***
 
