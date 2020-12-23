@@ -92,7 +92,6 @@ Access the Prometheus dashboard using below link:
 
 http://##DNS.ip##:30100
 
-
 - On the prometheus UI, Go to Status -> Targets to see endpoints.
 
 
