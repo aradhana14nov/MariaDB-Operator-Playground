@@ -3,7 +3,7 @@ title: MariaDB Backup Tutorial
 description: This tutorial explains how to schedule backup of MariaDB
 ---
 
-### Create the below CR which will schedule backup of MariaDB at defined schedule : 
+### Create below yaml to create CR for MariaDB Backup : 
 
 ***MariaDBBackup.yaml***
 
@@ -33,7 +33,7 @@ Execute below command to create MariaDBBackup instance:
 kubectl create -f MariaDBBackup.yaml -n my-mariadb-operator-app
 ```
 
-This CR will schedule backup of MariaDB at defined schedule. The Database backup files will be stored at location: '/mnt/backup'. 
+This CR will schedule backup of MariaDB at defined schedule.The Database backup files will be stored at location: '/mnt/backup'. 
 This location '/mnt/backup' should be created before applying the CR. 
 
 To Ensure that cronjob is configured correctly, run below command:
