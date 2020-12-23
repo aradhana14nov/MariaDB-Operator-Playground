@@ -29,6 +29,6 @@ This tutorial will cover MariaDB Operator with following topics:
 2. Create Instance Of MariaDB Operator
 3. How to access DB Instance and create database tables on MariaDB
 4. How to Schedule backup of MariaDB at regular intervals
-5. Enable monitoring services on MariaDB Server.
+5. Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
 6. Cleanup Operators
   
