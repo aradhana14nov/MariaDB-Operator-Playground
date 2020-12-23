@@ -7,7 +7,6 @@ description: This tutorial explains how to access MariaDB Database
 
 Execute below commands to connect with server and check for the newly created custom database (test-db)
 
-Step1: 
 
 - Get MariaDB Server Instance podname by using command :
 
@@ -25,82 +24,97 @@ mariadb-server-5dccfb7b59-rhxkm              1/1     Running   0          2d18h
 ```
 
 
-- Copy below command and execute by adding MariaDB Server Instance podname.
+- Connect to MariaDB Server pod.
 
+  Copy below command to the terminal,add the podname of MariaDB Server Instance.
+    
 ```copycommand
-kubectl exec -it <podname> bash -n my-mariadb-operator-app
-```
+ kubectl exec -it <podname> bash -n my-mariadb-operator-app
+ ```
 
-Step2:
 
-```execute
-mysql -h ##DNS.ip## -P 30685 -u db-user -pdb-user
-```
+- Connect to the database using username **db-user** and password **db-user**
 
-```
-Note: IP is kubernetes cluster IP.
-```
-  
-Step3:
+
+ ```execute
+ mysql -h ##DNS.ip## -P 30685 -u db-user -pdb-user
+ ```
+
+
+- list database
 
 ```execute
 show databases;
 ```
 
 
-Step4:
+- exit the database.
+
 
 ```execute
 exit
 ```
 
 
-Step5:
+- To login through root user, use below command:
 
-```
-Note: In order to create database table, login with root user using below command:
-```
 
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
-
-Step6:
+- Create database testdb
 
 ```execute
 create database testdb;
 ```
 
 
-Step7:
+- Use the testdb to create some table 
 
 ```execute
 use testdb;
 ```
 
 
-Step8:
+- Create table 
 
 ```execute
-create table names (name VARCHAR(100));
+create table Population(year numeric,population numeric);
+```
+
+- Insert datas into the table 
+
+```execute
+insert into Population values(2017,1380004385 );
+```
+
+```execute
+insert into Population values(2018,1366417754 );
+```
+
+```execute
+insert into Population values(2019,1352642280 );
+```
+
+```execute
+insert into Population values(2020,1338676785 );
 ```
 
 
-Step9:
+- Retrieve the data from table
 
 ```execute
-insert into names values('Abhijit');
+select * from Population;
 ```
 
-
-Step10:
+- Exit from testdb :
 
 ```execute
-select * from names;
+exit
 ```
 
-Step11: Exit:
+- Exit from pod :
 
 ```execute
 exit
