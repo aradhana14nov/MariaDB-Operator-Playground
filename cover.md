@@ -1,6 +1,4 @@
-<h1 align="center">Mariadb Operator</h1>
-
-![Logo](_images/logo.PNG)
+<h1 align="center">Mariadb Operator</h1> ![Logo](_images/logo.PNG)
 
 
 
