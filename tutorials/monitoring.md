@@ -5,7 +5,27 @@ description: This tutorial explains how to Enable Monitoring service to MariaDB
 
 ### Enable Monitoring service on MariaDB 
 
-Step1: Create below yaml to create CR for MariaDB Monitoring services.
+Step1: 
+
+- Execute below command to get services of MariadB:
+  
+  ```execute
+  kubectl get svc -n my-mariadb-operator-app
+  ```
+
+ Output:
+ ```
+      NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+ mariadb-operator-metrics   ClusterIP   10.111.158.91    <none>        8383/TCP,8686/TCP   3d4h
+ mariadb-service            NodePort    10.106.178.202   <none>        80:30685/TCP        3d4h
+ ```
+ 
+- Get the port of mariadb-service :
+  
+  From above command output, mariadb-service port is 30685 
+
+- To enable monitoring using Prometheus exporter pod and service, create the below yaml definition of the Custom Resource:
+
 
 ```execute
 cat <<'EOF'> MariaDBmonitoring.yaml
@@ -29,13 +49,22 @@ EOF
 Note: The database host and port should be correct for metrics to work.
 
 
+
 Step2: Execute below command to Create Instance of Monitoring 
 
 ```execute
 kubectl create -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
 ```
 
-This CR will start Prometheus exporter pod and service. 
+Output:
+
+
+```
+monitor.mariadb.persistentsys/mariadb-monitor created
+```
+
+This will start Prometheus exporter pod and service. 
+
 
 
 
