@@ -28,7 +28,7 @@ This Operator will be installed in the "operators" namespace and will be usable 
 kubectl get csv -n operators
 ```
 
-Output:
+You should see a similar output as below:
 
 ```
 NAME                        DISPLAY               VERSION   REPLACES                    PHASE
@@ -43,7 +43,7 @@ From above output, once operator is successfully installed, **PHASE** will be as
 kubectl get pods -n operators
 ```
 
-Output:
+OutputYou should see a similar output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -109,7 +109,7 @@ prometheus.monitoring.coreos.com/server created
 kubectl get pods -n operators
 ```
 
-Output:
+You should see a similar output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
