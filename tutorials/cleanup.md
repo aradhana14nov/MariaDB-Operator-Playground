@@ -9,7 +9,7 @@ description: This tutorial explains how to cleanup Operator
 
 
 
-***Delete the operator's CRs by kubectl delete commands :***
+***Delete the operator's Custom Resources  by kubectl delete commands :***
 
  
 
@@ -19,8 +19,8 @@ Example:
  kubectl delete -f MariaDBserver.yaml -n my-mariadb-operator-app 
  ```
 
-Note: Here MariaDBserver.yaml is the CR of the MariaDB Server Instance.
-Similarly,delete all the CRs.
+Note: Here MariaDBserver.yaml is the Custom Resource  of the MariaDB Server Instance.
+Similarly,delete all the Custom Resource s.
  
 
 ***Delete the operator by kubectl delete command:***
@@ -33,19 +33,9 @@ Similarly,delete all the CRs.
  ```
  
 
-***Delete the PVC:***
- 
-  
- Example:
- 
- ```
- kubectl delete pvc mariadb-pv-claim -n my-mariadb-operator-app
- ```
-
-
 ***Deleting the CSV resource and subscription***
 
-- Find the csv in the namespace
+- Find the CSV in the namespace
 
 Example:
 
@@ -53,7 +43,7 @@ Example:
 kubectl get csv -n operators
 ```
 
-- Delete that csv :
+- Delete that CSV :
 
 Example:
 
