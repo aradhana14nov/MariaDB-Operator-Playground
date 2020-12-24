@@ -7,11 +7,6 @@ description: This tutorial explains how to create Prometheus Operator
 ### Install Prometheus Operator and Deploy Prometheus Server and ServiceMonitor
 
 
-***Install Prometheus operator from :*** 
-
-Operator Hub link: https://operatorhub.io/operator/prometheus
-
-
 Step 1 : Install the Prometheus operator by running the following command:
 
 ```execute
@@ -27,7 +22,7 @@ subscription.operators.coreos.com/my-prometheus created
 This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
 
 
-- After Operator installation, verify that your operator got successfully installed by executing the below command.:
+- After Operator installation, verify that your operator got successfully installed by executing the below command:
 
 ```execute
 kubectl get csv -n operators
@@ -42,7 +37,7 @@ prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0
 
 From above output, once operator is successfully installed, **PHASE** will be as "Succeeded" 
 
-- Check the Pods status using below command::
+- Check the Pods status using below command:
 
 ```execute
 kubectl get pods -n operators
@@ -91,7 +86,7 @@ EOF
 ```
 
 
-Step 3: Execute below command to create Prometheus instance
+Step 3: Execute below command to create Prometheus instance:
 
 
 
@@ -122,7 +117,7 @@ prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          14m
 prometheus-server-0                    3/3     Running   1          40s
 ```
 
-Step 4: Create below yaml definition of the Custom Resource to create the service to access prometheus server
+Step 4: Create below yaml definition of the Custom Resource to create the service to access prometheus server:
 
 
 ```execute
@@ -204,7 +199,7 @@ servicemonitor.monitoring.coreos.com/mariadb-monitor created
 ```
 
 
-- Get the associated Pods:
+- Check the pods status using below commands:
 
 
 
