@@ -24,7 +24,7 @@ This Operator will be installed in the "my-grafana-operator" namespace and will 
 
 
 
-Step 2: After installation, verify that your operator got successfully installed by executing the below command.
+Step 2: After installation, verify that your operator got successfully installed by executing the below command:
 
 ```execute
 kubectl get csv -n my-grafana-operator
@@ -39,7 +39,7 @@ grafana-operator.v3.2.0   Grafana Operator   3.2.0     grafana-operator.v3.0.2  
 
 **Please wait till `PHASE` status will be `Succeeded` and then proceed further.**
 
-After the installation is successful , you can check your operator pods by executing the below command.
+After the installation is successful , you can check your operator's pods by executing the below command:
 
 ```execute
 kubectl get pods -n my-grafana-operator
@@ -60,7 +60,7 @@ Below steps assumes that its deployed in my-grafana-operator namespace.
 ### Deploy Grafana Server Instance and Grafana Data-Source:
 
 
-Step 3: Create below yaml definition of the Custom Resource to create Grafana Instance
+Step 3: Create below yaml definition of the Custom Resource to create Grafana Instance:
 
 
 ```execute
@@ -182,7 +182,7 @@ spec:
 EOF
 ```
 
-Here we are choosing Prometheus as our datasourse.
+Here we are choosing Prometheus as datasourse.
 
 Step 9:Execute below command to create instance of Grafana datasource:
 
@@ -198,7 +198,7 @@ grafanadatasource.integreatly.org/prometheus-grafanadatasource created
 ```
 
 
-Step 10: Check the associated Pods:
+Step 10: Check Pods status:
 
 
 
