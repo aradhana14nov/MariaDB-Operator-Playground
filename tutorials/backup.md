@@ -3,9 +3,7 @@ title: MariaDB Backup Tutorial
 description: This tutorial explains how to schedule backup of MariaDB
 ---
 
-### create below yaml definition of the Custom Resource to create CR for MariaDB Backup : 
-
-***MariaDBBackup.yaml***
+### create below yaml definition of the Custom Resource to create Instance for MariaDB Backup: 
 
 ```execute
 cat <<'EOF' > MariaDBBackup.yaml
@@ -50,7 +48,9 @@ To Ensure that cronjob is configured correctly, run below command:
 kubectl get cronjob -n my-mariadb-operator-app
 ```
 
-Output:
+ou should see a similar output as below:
+
+
 ```
 NAME             SCHEDULE    SUSPEND   ACTIVE   LAST SCHEDULE   AGE
 mariadb-backup   0 0 * * *   False     0        <none>          17m
