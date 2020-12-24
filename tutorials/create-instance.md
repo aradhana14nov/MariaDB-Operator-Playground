@@ -6,6 +6,7 @@ description: This tutorial explains how to create Instance of MariaDB Operator
 ### Create Instance of MariaDB 
 
 
+
 ***Create below yaml which will create a Custom Resource for MariaDB Server Instance and also create database called test-db, along with user credentials:***
 
 ```execute
@@ -43,20 +44,29 @@ EOF
 
 ***Execute below command to create MariaDBserver instance :***
 
+
 ```execute
 kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app 
 ```
 
+
 This CR will create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB CR file. As Database will be stored at location: '/mnt/data'.These location should exists before applying the CR. 
+
+
 
 ### Verify MariaDB Deployment
 
+
+
 ***Verify pods status:*** 
+
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app 
 ```
-Output:
+
+You should see a similar output as below:
+
 ```
 NAME                              READY   STATUS    RESTARTS   AGE
 mariadb-operator-78c95468-m824g   1/1     Running   0          118s
@@ -65,11 +75,15 @@ mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 
 ***Verify services:***
 
+
+
 ```execute
 kubectl get svc -n my-mariadb-operator-app 
 ```
 
-Output:
+You should see a similar output as below:
+
+
 ```
 NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
 mariadb-operator-metrics   ClusterIP   10.98.179.105    <none>        8383/TCP,8686/TCP   101s
@@ -82,7 +96,7 @@ Service "mariadb-service" is a NodePort that exposes mariadb on port 3306
 kubectl describe service/mariadb-service -n my-mariadb-operator-app
 ```
 
-Output:
+You should see a similar output as below:
 
 ```
 Name:                     mariadb-service
