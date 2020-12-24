@@ -7,7 +7,7 @@ description: This tutorial explains how to Enable Monitoring service to MariaDB
 
 Step1: 
 
-- Execute below command to get services of MariadB:
+- Execute below command to get services of MariadB in "my-mariadb-operator-app" namespace :
   
   ```execute
   kubectl get svc -n my-mariadb-operator-app
@@ -50,7 +50,7 @@ Note: The database host and port should be correct for metrics to work.
 
 
 
-Step2: Execute below command to Create Instance of Monitoring 
+Step2: Execute below command to Create Instance of Monitoring: 
 
 ```execute
 kubectl create -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
@@ -117,7 +117,7 @@ Please go to Grafana Operator tutorial
 ### Step 4: Access Grafana dashboard
 
 
-- Execute below command to get all services in "my-grafana-operator" namespace.
+- Execute below command to get all services in "my-grafana-operator" namespace:
 
 
 ```execute
